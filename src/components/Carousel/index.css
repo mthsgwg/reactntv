@@ -1,0 +1,24 @@
+.logo-carousel {
+  height: 300px;
+  max-height: 100%;
+}
+
+.carousel {
+  text-align: center;
+}
+
+.carousel-slider {
+  width: 40% !important;
+  margin-left: 30% !important;
+}
+
+.carousel .thumb {
+  min-width: 9.5%;
+  height: 70px;
+  box-shadow: 0 1px 4px black;
+  border-radius: 4px;
+}
+
+.legend {
+  font-size: 1em !important;
+}
