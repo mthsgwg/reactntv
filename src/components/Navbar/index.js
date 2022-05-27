@@ -8,10 +8,10 @@ export default function MainNavbar() {
     <Navbar>
       <img src={logo} className="logo" />
       <a href="/" className="nav-text">
-        programas
+        matérias
       </a>
       <a href="/" className="nav-text">
-        matérias
+        programas
       </a>
       <a href="/" className="nav-text">
         contato

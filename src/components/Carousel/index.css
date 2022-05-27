@@ -1,5 +1,5 @@
 .logo-carousel {
-  height: 300px;
+  height: 360px;
   max-height: 100%;
 }
 
@@ -8,8 +8,7 @@
 }
 
 .carousel-slider {
-  width: 40% !important;
-  margin-left: 30% !important;
+  width: 640px !important;
 }
 
 .carousel .thumb {

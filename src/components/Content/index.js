@@ -4,6 +4,7 @@ import { SecondContainer } from './styled';
 import Materias from '../Materias';
 import Programs from '../Programs';
 import CarouselBootstrap from '../Carousel/index';
+import Timeline from '../Timeline';
 
 import gifTv from '../../images/ntvpatos.gif';
 import gifNossa from '../../images/nossafm1.gif';
@@ -49,6 +50,7 @@ export default function Content() {
       </SecondContainer>
       <Materias />
       <Programs />
+      <Timeline />
     </>
   );
 }

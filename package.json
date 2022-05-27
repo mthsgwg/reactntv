@@ -12,6 +12,8 @@
     "react-icons": "^4.3.1",
     "react-responsive-carousel": "^3.2.23",
     "react-scripts": "5.0.1",
+    "react-step-progress-bar": "^1.0.3",
+    "rm": "^0.1.8",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },

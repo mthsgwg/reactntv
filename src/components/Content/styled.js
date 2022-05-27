@@ -45,7 +45,7 @@ export const SecondContainer = styled.div`
   height: 60%;
   background-color: #e6e2d3;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 
   .assista-hoje {
@@ -74,6 +74,7 @@ export const SecondContainer = styled.div`
     width: 90%;
     display: grid;
     grid-template-columns: 60% 40%;
+    gap: 60px;
   }
 
   .box-assista {
@@ -84,5 +85,9 @@ export const SecondContainer = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+  }
+
+  .box-gif img {
+    margin-top: 3%;
   }
 `;
