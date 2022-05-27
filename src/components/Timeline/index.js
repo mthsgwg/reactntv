@@ -84,6 +84,18 @@ export default function Timeline() {
                   className={`indexedStep ${accomplished ? 'accomplished' : null
                     }`}
                 >
+                  <p>14:00 {' '} Reginaldo Manzotti</p>
+                </div>
+              </ div>
+            )}
+          </Step>
+          <Step>
+            {({ accomplished, index }) => (
+              <div className='steps'>
+                <div
+                  className={`indexedStep ${accomplished ? 'accomplished' : null
+                    }`}
+                >
                   <p>14:30 {' '} Rede Minas</p>
                 </div>
               </ div>

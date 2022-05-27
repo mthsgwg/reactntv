@@ -5,6 +5,7 @@ import Materias from '../Materias';
 import Programs from '../Programs';
 import CarouselBootstrap from '../Carousel/index';
 import Timeline from '../Timeline';
+import Contact from '../Contact';
 
 import gifTv from '../../images/ntvpatos.gif';
 import gifNossa from '../../images/nossafm1.gif';
@@ -51,6 +52,7 @@ export default function Content() {
       <Materias />
       <Programs />
       <Timeline />
+      <Contact />
     </>
   );
 }
