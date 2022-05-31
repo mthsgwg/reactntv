@@ -23,16 +23,7 @@ export default function ConteudoMaterias() {
   };
   return (
     <Container>
-      <div className="materias">
-        <div>m</div>
-        <div>a</div>
-        <div>t</div>
-        <div>e</div>
-        <div>r</div>
-        <div>i</div>
-        <div>a</div>
-        <div>s</div>
-      </div>
+      <div className="materias">materias</div>
       <div className="materias-videos">
         <ContainerVideos>
           <section className="videos">
@@ -45,7 +36,7 @@ export default function ConteudoMaterias() {
                   </p>
                 </div>
               </div>
-              <div className="b-top" style={blue}>
+              <div className="a-top" style={blue}>
                 <div className="placeholder-video">
                   <img src={second} />
                   <p className="legenda">
@@ -54,7 +45,7 @@ export default function ConteudoMaterias() {
                   </p>
                 </div>
               </div>
-              <div className="c-top" style={yellow}>
+              <div className="a-top" style={yellow}>
                 <div className="placeholder-video">
                   <img src={third} />
                   <p className="legenda">
@@ -73,7 +64,7 @@ export default function ConteudoMaterias() {
                   </p>
                 </div>
               </div>
-              <div className="b-top" style={blue}>
+              <div className="a-top" style={blue}>
                 <div className="placeholder-video">
                   <img src={second} />
                   <p className="legenda">
@@ -82,7 +73,7 @@ export default function ConteudoMaterias() {
                   </p>
                 </div>
               </div>
-              <div className="c-top" style={yellow}>
+              <div className="a-top" style={yellow}>
                 <div className="placeholder-video">
                   <img src={third} />
                   <p className="legenda">
@@ -101,7 +92,7 @@ export default function ConteudoMaterias() {
                   </p>
                 </div>
               </div>
-              <div className="b-top" style={blue}>
+              <div className="a-top" style={blue}>
                 <div className="placeholder-video">
                   <img src={second} />
                   <p className="legenda">
@@ -110,7 +101,7 @@ export default function ConteudoMaterias() {
                   </p>
                 </div>
               </div>
-              <div className="c-top" style={yellow}>
+              <div className="a-top" style={yellow}>
                 <div className="placeholder-video">
                   <img src={third} />
                   <p className="legenda">

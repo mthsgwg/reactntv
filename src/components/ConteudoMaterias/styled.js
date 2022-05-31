@@ -9,18 +9,29 @@ export const Container = styled.div`
 
   .materias {
     color: #f2f2f2;
-    font-size: 3.5em;
-    text-align: right;
-    padding-right: 20%;
+    font-size: 4vw;
     width: 100%;
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
       sans-serif;
     font-weight: 700;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center;
   }
 
   .materias-videos {
     overflow: hidden;
+  }
+
+  @media (max-width: 1200px) {
+    & {
+      grid-template-columns: 1fr;
+    }
+
+    .materias {
+      writing-mode: horizontal-tb;
+    }
   }
 `;
 
@@ -28,6 +39,8 @@ export const ContainerVideos = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
   .videos {
     display: flex;
@@ -47,16 +60,6 @@ export const ContainerVideos = styled.div`
     width: 100%;
   }
   .a-top {
-    width: 100%;
-    height: 100%;
-    box-shadow: 2px 2px 4px black;
-  }
-  .b-top {
-    width: 100%;
-    height: 100%;
-    box-shadow: 2px 2px 4px black;
-  }
-  .c-top {
     width: 100%;
     height: 100%;
     box-shadow: 2px 2px 4px black;
@@ -120,6 +123,20 @@ export const ContainerVideos = styled.div`
     margin: 20px;
     text-decoration: underline;
     color: #303030;
+  }
+
+  @media (max-width: 700px) {
+    .videos {
+      max-width: 100%;
+      min-width: 100%;
+      width: 100%;
+    }
+
+    .older-content {
+      width: 90%;
+      min-width: 90%;
+      max-width: 90%;
+    }
   }
 `;
 
