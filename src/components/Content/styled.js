@@ -119,6 +119,7 @@ export const SecondContainer = styled.div`
 
   .box-gif img {
     margin-top: 3%;
+    width: 60%;
   }
 
   @media (max-width: 1200px) {

@@ -14,7 +14,7 @@ export function getTime() {
   if (dateHour >= '13:30') return 27;
   if (dateHour >= '12:00') return 18;
   if (dateHour >= '11:29') return 9;
-  if (dateHour > '00:00' && dateHour < '23:59') return 2;
+  if (dateHour > '00:00') return 2;
 
   return dateHour;
 }
