@@ -11,7 +11,7 @@ import fifth from '../../images/materias/5.jpg';
 import sixth from '../../images/materias/6.jpg';
 import seventh from '../../images/materias/7.jpg';
 */
-export default function Materias() {
+export default function ConteudoMaterias() {
   const red = {
     background: 'white',
   };

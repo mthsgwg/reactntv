@@ -13,15 +13,11 @@ export const Navbar = styled.nav`
   z-index: 1000;
 
   .logo {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 3%;
   }
 
   .nav-text {
     font-size: 150%;
-  }
-
-  a {
     text-decoration: none;
     color: #fff;
   }

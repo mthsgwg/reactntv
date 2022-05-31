@@ -69,6 +69,10 @@ export const ProgramsContainer = styled.section`
     height: 100%;
     transition: all 0.3s;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
   .second-row {

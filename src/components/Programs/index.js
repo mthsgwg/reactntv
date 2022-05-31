@@ -19,15 +19,21 @@ export default function Programs() {
           <h3>INFORMATIVOS</h3>
           <div className="first-row-pgms">
             <div className="div-pgm">
-              <div className="overlay-row">1</div>
+              <div className="overlay-row">
+                30 Minutos a partir de <p>11:30 de segunda a sexta-feira</p>
+              </div>
               <img src={trinta} className="img-row" />
             </div>
             <div className="div-pgm">
-              <div className="overlay-row">1</div>
+              <div className="overlay-row">
+                Guy Boaventura a partir de <p>12:00 de segunda a sexta-feira</p>
+              </div>
               <img src={guy} className="img-row" />
             </div>
             <div className="div-pgm">
-              <div className="overlay-row">1</div>
+              <div className="overlay-row">
+                NTV News a partir de <p>19:00 de segunda a sábado</p>
+              </div>
               <img src={news} className="img-row" />
             </div>
           </div>
@@ -39,19 +45,27 @@ export default function Programs() {
         </div>
         <div className="second-row-pgms">
           <div className="div-pgm">
-            <div className="overlay-row">1</div>
+            <div className="overlay-row">
+              Mais Saúde a partir de <p>18:00 às terças-feiras</p>
+            </div>
             <img src={saude} className="img-row" />
           </div>
           <div className="div-pgm">
-            <div className="overlay-row">1</div>
+            <div className="overlay-row">
+              Espaço Feminino a partir de <p>18:00 às quartas-feiras</p>
+            </div>
             <img src={ef} className="img-row" />
           </div>
           <div className="div-pgm">
-            <div className="overlay-row">1</div>
+            <div className="overlay-row">
+              Buteco da Nossa a partir de <p>18:30 às quintas-feiras</p>
+            </div>
             <img src={buteco} className="img-row" />
           </div>
           <div className="div-pgm">
-            <div className="overlay-row">1</div>
+            <div className="overlay-row">
+              Opinião Regional a partir de <p>18:30 às sextas-feiras</p>
+            </div>
             <img src={opiniao} className="img-row" />
           </div>
         </div>

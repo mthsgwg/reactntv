@@ -6,8 +6,10 @@ import logo from '../../images/logo.png';
 export default function MainNavbar() {
   return (
     <Navbar>
-      <img src={logo} className="logo" />
-      <a href="/" className="nav-text">
+      <a href="/" className="logo">
+        <img src={logo} />
+      </a>
+      <a href="/materias" className="nav-text">
         matérias
       </a>
       <a href="/" className="nav-text">
