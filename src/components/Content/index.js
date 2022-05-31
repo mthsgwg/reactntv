@@ -20,6 +20,7 @@ export default function Content() {
             frameBorder="0"
             scrolling="auto"
             allowFullScreen
+            className="player"
           ></iframe>
           <h1 className="text-pgm">
             Assista <span className="live"> ao vivo </span>a programação da NTV
@@ -27,26 +28,24 @@ export default function Content() {
         </section>
       </Container>
       <SecondContainer>
-        <section className="second-section">
-          <div className="head-scnd-page">
-            <div className="box-assista">
-              <div className="assista-hoje">
-                <h2>
-                  <span className="hoje">hoje</span> na{' '}
-                  <span className="ntv">ntv</span>
-                </h2>
-              </div>
-              <CarouselBootstrap />
+        <div className="head-scnd-page">
+          <div className="box-assista">
+            <div className="assista-hoje">
+              <h2>
+                <span className="hoje">hoje</span> na{' '}
+                <span className="ntv">ntv</span>
+              </h2>
             </div>
-            <div className="box-gif">
-              <div className="assista-hoje">
-                <h4>confira também</h4>
-              </div>
-              <img src={gifTv} />
-              <img src={gifNossa} />
-            </div>
+            <CarouselBootstrap />
           </div>
-        </section>
+          <div className="box-gif">
+            <div className="assista-hoje">
+              <h4>confira também</h4>
+            </div>
+            <img src={gifTv} />
+            <img src={gifNossa} />
+          </div>
+        </div>
       </SecondContainer>
       <ConteudoMaterias />
       <Programs />

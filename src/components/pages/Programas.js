@@ -1,9 +1,11 @@
 import React from 'react';
+import Programs from '../Programs';
 
 export default function Home() {
   return (
     <>
-      <h1> Programas </h1>
+      <div className="spacing" />
+      <Programs />
     </>
   );
 }

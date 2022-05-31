@@ -1,19 +1,20 @@
-.logo-carousel {
-  height: 360px;
-  max-height: 100%;
+.carousel-container {
+  width: 60%;
 }
 
 .carousel {
   text-align: center;
+  height: auto;
 }
 
 .carousel-slider {
-  width: 640px !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
 }
 
 .carousel .thumb {
   min-width: 9.5%;
-  height: 70px;
+  height: auto;
   box-shadow: 0 1px 4px black;
   border-radius: 4px;
 }

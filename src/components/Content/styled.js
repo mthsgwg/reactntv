@@ -4,7 +4,6 @@ export const Container = styled.div`
   padding-top: 70px;
   width: 100%;
   height: 80%;
-  min-height: 80vh;
   background-color: orange;
   display: flex;
   align-items: center;
@@ -12,14 +11,39 @@ export const Container = styled.div`
 
   .first-section {
     width: 80%;
-    height: 100%;
-    min-height: 60vh;
+    height: auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    margin: 30px;
+  }
+
+  .player {
+    aspect-ratio: 16 / 9;
+  }
+
+  @media (max-width: 600px) {
+    .text-pgm {
+      font-size: 30px !important;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .first-section {
+      grid-template-columns: 1fr;
+    }
+
+    & {
+      height: fit-content;
+    }
+
+    .text-pgm {
+      margin-top: -15%;
+      font-size: 5vw;
+    }
   }
 
   .text-pgm {
-    font-size: 4em;
+    font-size: 3vw;
     text-align: center;
     text-transform: lowercase;
     font-weight: 700;
@@ -73,21 +97,33 @@ export const SecondContainer = styled.div`
   .head-scnd-page {
     width: 90%;
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 50%;
     gap: 60px;
   }
 
   .box-assista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .box-gif {
-    margin: 20px auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
   }
 
   .box-gif img {
     margin-top: 3%;
+  }
+
+  @media (max-width: 1200px) {
+    .head-scnd-page {
+      grid-template-columns: 1fr;
+    }
   }
 `;

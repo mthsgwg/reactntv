@@ -64,7 +64,6 @@ export const SectionMaterias = styled.section`
     height: 100%;
     max-height: 100%;
     font-weight: 700;
-    margin: 0 auto;
-    margin-top: 10px;
+    margin: 10px auto;
   }
 `;

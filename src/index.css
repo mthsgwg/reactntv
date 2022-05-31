@@ -19,13 +19,16 @@ code {
   box-sizing: border-box;
 }
 
+.spacing {
+  padding-top: 70px;
+}
 .container-404 {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: blue;
+  background-color: #034f84;
   color: white;
   flex-direction: column;
 }

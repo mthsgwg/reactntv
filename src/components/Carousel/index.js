@@ -10,23 +10,25 @@ import trinta from '../../images/trinta.png';
 
 export default function CarouselBootstrap() {
   return (
-    <Carousel autoPlay={true} infiniteLoop={true}>
-      <div>
-        <img src={buteco} className="logo-carousel" />
-        <p className="legend">Buteco da nossa 18:00 às 19:00</p>
-      </div>
-      <div>
-        <img src={news} className="logo-carousel" />
-        <p className="legend">Buteco da nossa 18:00 às 19:00</p>
-      </div>
-      <div>
-        <img src={trinta} className="logo-carousel" />
-        <p className="legend">Buteco da nossa 18:00 às 19:00</p>
-      </div>
-      <div>
-        <img src={trinta} className="logo-carousel" />
-        <p className="legend">Buteco da nossa 18:00 às 19:00</p>
-      </div>
-    </Carousel>
+    <section className="carousel-container">
+      <Carousel autoPlay={true} infiniteLoop={true}>
+        <div>
+          <img src={buteco} />
+          <p className="legend">Buteco da nossa 18:00 às 19:00</p>
+        </div>
+        <div>
+          <img src={news} className="logo-carousel" />
+          <p className="legend">Buteco da nossa 18:00 às 19:00</p>
+        </div>
+        <div>
+          <img src={trinta} className="logo-carousel" />
+          <p className="legend">Buteco da nossa 18:00 às 19:00</p>
+        </div>
+        <div>
+          <img src={trinta} className="logo-carousel" />
+          <p className="legend">Buteco da nossa 18:00 às 19:00</p>
+        </div>
+      </Carousel>
+    </section>
   );
 }

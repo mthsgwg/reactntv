@@ -12,7 +12,7 @@ export default function MainNavbar() {
       <a href="/materias" className="nav-text">
         matérias
       </a>
-      <a href="/" className="nav-text">
+      <a href="/programas" className="nav-text">
         programas
       </a>
       <a href="/" className="nav-text">
