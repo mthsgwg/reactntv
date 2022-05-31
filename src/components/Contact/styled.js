@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ContactContainer = styled.div`
   width: 100%;
   height: 40%;
-  min-height: 40vh;
+
   background-color: #2e2e2e;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -14,7 +14,7 @@ export const ContactContainer = styled.div`
     border-radius: 20px;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    height: 75%;
+    height: fit-content;
   }
 
   .contato h3 {
@@ -25,39 +25,35 @@ export const ContactContainer = styled.div`
     margin-bottom: 20px;
   }
 
+  .form-nome {
+    width: 33.33%;
+  }
+
   #form-contato {
-    width: min-content;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.2);
   }
 
-  .form-nome {
-    width: 143px;
-    margin: 5px;
+  .top-inputs {
+    width: 100%;
     height: 20px;
+    margin-bottom: 1%;
   }
 
   .form-mensagem {
-    width: 450px;
+    width: 100%;
     height: 100px;
-    margin: 5px;
   }
 
   #form-contato button {
     text-align: center;
-    margin: 5px;
     width: 450px;
   }
 
-  .contato-contato {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
+  .contato-contato,
   .contato-redes {
     display: flex;
     justify-content: center;
@@ -68,8 +64,9 @@ export const ContactContainer = styled.div`
   .contato-redes p {
     color: #f2f2f2;
     font-weight: 700;
-    font-size: 1.5em;
-    padding: 10px;
+    font-size: 2rem;
+    padding: 5px;
+    text-align: center;
   }
   .contato-redes a:hover {
     color: darkblue;
@@ -77,12 +74,45 @@ export const ContactContainer = styled.div`
 
   .container-redes {
     background-color: rgba(0, 0, 0, 0.4);
-    height: fit-content;
+    height: 80%;
     width: fit-content;
   }
 
   a {
     text-decoration: none;
     color: #f2f2f2;
+  }
+
+  @media (max-width: 1200px) {
+    & {
+      grid-template-columns: 0fr 1fr 0fr;
+    }
+
+    .contato {
+      grid-template-columns: 1fr;
+    }
+
+    .contato-redes p {
+      color: #f2f2f2;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .form-nome {
+      width: 33.33%;
+      height: 20px;
+    }
+
+    .form-mensagem {
+      width: 100%;
+      height: 50px;
+    }
+
+    #form-contato button {
+      text-align: center;
+      width: 100%;
+    }
   }
 `;

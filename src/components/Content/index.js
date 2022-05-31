@@ -31,10 +31,8 @@ export default function Content() {
         <div className="head-scnd-page">
           <div className="box-assista">
             <div className="assista-hoje">
-              <h2>
-                <span className="hoje">hoje</span> na{' '}
-                <span className="ntv">ntv</span>
-              </h2>
+              <span className="hoje">hoje</span> na{' '}
+              <span className="ntv">ntv</span>
             </div>
             <CarouselBootstrap />
           </div>

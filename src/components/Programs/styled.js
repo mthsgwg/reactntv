@@ -69,6 +69,8 @@ export const ProgramsContainer = styled.section`
     height: 100%;
     transition: all 0.3s;
     border-radius: 20px;
+    font-size: 1.8vw;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,5 +105,30 @@ export const ProgramsContainer = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
+  }
+
+  @media (max-width: 1000px) {
+    .second-row {
+      height: fit-content;
+    }
+
+    .second-row-pgms {
+      grid-template-columns: 1fr 1fr;
+    }
+    padding-bottom: 10px;
+  }
+
+  @media (max-width: 700px) {
+    .second-row {
+      height: fit-content;
+    }
+
+    .first-row-pgms {
+      grid-template-columns: 1fr;
+    }
+    .second-row-pgms {
+      grid-template-columns: 1fr;
+      padding-bottom: 10px;
+    }
   }
 `;

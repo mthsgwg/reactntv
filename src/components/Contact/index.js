@@ -20,32 +20,33 @@ export default function Contact() {
             <h3>contate-nos</h3>
             <div>
               <form onSubmit={onSubmitWithReCAPTCHA} id="form-contato">
-                <input
-                  type={'text'}
-                  placeholder="Seu nome"
-                  className="form-nome"
-                  required
-                />
-                <input
-                  type={'email'}
-                  placeholder="Seu email"
-                  required
-                  className="form-nome"
-                />
-                <input
-                  type={'tel'}
-                  placeholder="Seu telefone"
-                  required
-                  className="form-nome"
-                />
-                <br />
+                <div className="top-inputs">
+                  <input
+                    type={'text'}
+                    placeholder="Seu nome"
+                    className="form-nome"
+                    required
+                  />
+                  <input
+                    type={'email'}
+                    placeholder="Seu email"
+                    required
+                    className="form-nome"
+                  />
+                  <input
+                    type={'tel'}
+                    placeholder="Seu telefone"
+                    required
+                    className="form-nome"
+                  />
+                </div>
                 <input
                   type={'text'}
                   placeholder="Sua mensagem"
                   className="form-mensagem"
                   required
                 />
-                <br />
+
                 <ReCAPTCHA
                   ref={recaptchaRef}
                   size="invisible"

@@ -78,7 +78,6 @@ export const SecondContainer = styled.div`
     text-align: center;
     font-size: 3em;
     text-shadow: 0 3px 3px #000;
-    margin-top: 0%;
     margin-bottom: 2%;
   }
   .hoje {
@@ -125,6 +124,19 @@ export const SecondContainer = styled.div`
   @media (max-width: 1200px) {
     .head-scnd-page {
       grid-template-columns: 1fr;
+    }
+
+    .head-scnd-page {
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 750px) {
+    .assista-hoje,
+    .hoje,
+    .ntv {
+      font-size: 2em;
+      margin-bottom: 0.5%;
     }
   }
 `;

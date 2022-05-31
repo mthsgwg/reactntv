@@ -125,7 +125,7 @@ export const ContainerVideos = styled.div`
     color: #303030;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 900px) {
     .videos {
       max-width: 100%;
       min-width: 100%;
@@ -136,6 +136,10 @@ export const ContainerVideos = styled.div`
       width: 90%;
       min-width: 90%;
       max-width: 90%;
+    }
+
+    .legenda {
+      font-size: 0.7em;
     }
   }
 `;
