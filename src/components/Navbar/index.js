@@ -5,7 +5,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 
 export default function MainNavbar() {
   return (
-    <Navbar bg="dark" variant="dark" x expand="lg" className="fixed-top">
+    <Navbar bg="dark" variant="dark" expand="lg" className="fixed-top">
       <Container>
         <Navbar.Brand href="/">
           <img width="50" height="50" src={logo} className="" />

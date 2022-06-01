@@ -18,4 +18,9 @@ export const WrapperMateria = styled.section`
   background-color: #e6e2d3;
   border-radius: 5px;
   padding: 10px;
+
+  .grid-programa {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
 `;

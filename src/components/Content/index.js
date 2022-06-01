@@ -23,7 +23,8 @@ export default function Content() {
             className="player"
           ></iframe>
           <h1 className="text-pgm">
-            Assista <span className="live"> ao vivo </span>a programação da NTV
+            Assista <span className="live-span"> ao vivo </span>a programação da
+            NTV
           </h1>
         </section>
       </Container>
@@ -38,9 +39,7 @@ export default function Content() {
           </div>
           <div className="box-gif">
             <div className="assista-hoje">
-              <span className="ntv" confira também>
-                confira também
-              </span>
+              <span className="ntv">confira também</span>
             </div>
             <img src={gifTv} />
             <img src={gifNossa} />

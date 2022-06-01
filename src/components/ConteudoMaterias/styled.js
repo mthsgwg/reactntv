@@ -10,7 +10,7 @@ export const Container = styled.div`
     rgba(3, 79, 132, 1) 51%
   );
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 5fr;
 
   .materias {
     color: #f2f2f2;
@@ -27,6 +27,7 @@ export const Container = styled.div`
 
   .materias-videos {
     overflow: hidden;
+    padding: 20px;
   }
 
   @media (max-width: 1200px) {
@@ -56,8 +57,7 @@ export const ContainerVideos = styled.div`
     height: fit-content;
   }
 
-  .videos div {
-    margin: 5px;
+  .placeholder-video {
   }
 
   .top {
@@ -69,13 +69,11 @@ export const ContainerVideos = styled.div`
   }
   .a-top {
     width: 100%;
-    height: 240px;
+    height: 250px;
     box-shadow: 2px 2px 4px black;
+    margin: 5px;
   }
 
-  .placeholder-video {
-    overflow: hidden;
-  }
   .legenda {
     z-index: 10;
     text-align: center;
@@ -111,7 +109,7 @@ export const ContainerVideos = styled.div`
 
   .search-box {
     width: 100%;
-    height: 10%;
+    height: fit-content;
     display: flex;
     justify-content: center;
     margin-top: 2%;
@@ -122,6 +120,7 @@ export const ContainerVideos = styled.div`
   }
   .search-box button {
     width: 10%;
+    height: 30px;
   }
 
   .title-older-content {

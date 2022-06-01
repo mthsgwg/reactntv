@@ -57,13 +57,13 @@ export const Container = styled.div`
     padding-top: 22%;
   }
 
-  .live {
+  .live-span {
     transition: all 0.5s;
   }
 
   .text-pgm:hover {
-    .live {
-      color: #034f84;
+    .live-span {
+      color: #15b1f1;
       text-shadow: 0 2px 2px white;
     }
   }
