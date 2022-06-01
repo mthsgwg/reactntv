@@ -1,23 +1,30 @@
 import React from 'react';
 
-import { Navbar } from './styled';
 import logo from '../../images/logo.png';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
 export default function MainNavbar() {
   return (
-    <Navbar>
-      <a href="/" className="logo">
-        <img src={logo} />
-      </a>
-      <a href="/materias" className="nav-text">
-        matérias
-      </a>
-      <a href="/programas" className="nav-text">
-        programas
-      </a>
-      <a href="/" className="nav-text">
-        contato
-      </a>
+    <Navbar bg="dark" variant="dark" x expand="lg" className="fixed-top">
+      <Container>
+        <Navbar.Brand href="/">
+          <img width="50" height="50" src={logo} className="" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home" className="fw-bold fs-3 mx-5">
+              home
+            </Nav.Link>
+            <Nav.Link href="/materias" className="fw-bold fs-3 mx-5">
+              materias
+            </Nav.Link>
+            <Nav.Link href="/programas" className="fw-bold fs-3 mx-5">
+              programas
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
   );
 }

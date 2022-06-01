@@ -23,7 +23,7 @@ export default function ConteudoMaterias() {
   };
   return (
     <Container>
-      <div className="materias">materias</div>
+      <div className="materias">reportágens</div>
       <div className="materias-videos">
         <ContainerVideos>
           <section className="videos">

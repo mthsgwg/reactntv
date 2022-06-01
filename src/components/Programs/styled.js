@@ -34,6 +34,7 @@ export const ProgramsContainer = styled.section`
     color: #f2f2f2;
     text-shadow: 2px 2px 4px black;
     margin-bottom: 10px;
+    font-weight: 700;
   }
 
   .first-row-pgms {
@@ -99,6 +100,7 @@ export const ProgramsContainer = styled.section`
     color: #f2f2f2;
     text-shadow: 2px 2px 4px black;
     margin-bottom: 10px;
+    font-weight: 700;
   }
 
   .second-row-pgms {

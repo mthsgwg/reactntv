@@ -38,7 +38,9 @@ export default function Content() {
           </div>
           <div className="box-gif">
             <div className="assista-hoje">
-              <h4>confira também</h4>
+              <span className="ntv" confira também>
+                confira também
+              </span>
             </div>
             <img src={gifTv} />
             <img src={gifNossa} />

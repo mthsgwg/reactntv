@@ -87,6 +87,11 @@ export const SecondContainer = styled.div`
     transition: all 0.3s;
   }
 
+  .hoje,
+  .ntv {
+    font-weight: 700;
+  }
+
   .assista-hoje:hover {
     .ntv {
       color: orange;

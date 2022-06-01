@@ -41,7 +41,7 @@ export default function Programs() {
       </div>
       <div className="second-row">
         <div className="second-row-title">
-          <h3>ENTRETENIMENTO</h3>
+          <h3 className="fs-bold">ENTRETENIMENTO</h3>
         </div>
         <div className="second-row-pgms">
           <div className="div-pgm">
