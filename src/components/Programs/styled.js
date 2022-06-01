@@ -132,5 +132,9 @@ export const ProgramsContainer = styled.section`
       grid-template-columns: 1fr;
       padding-bottom: 10px;
     }
+
+    .overlay-row {
+      font-size: 4vw;
+    }
   }
 `;

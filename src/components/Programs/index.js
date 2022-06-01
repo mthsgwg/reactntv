@@ -18,24 +18,31 @@ export default function Programs() {
         <div className="first-row-title">
           <h3>INFORMATIVOS</h3>
           <div className="first-row-pgms">
-            <div className="div-pgm">
-              <div className="overlay-row">
-                30 Minutos a partir de <p>11:30 de segunda a sexta-feira</p>
+            <a href="/programas/trintaminutos">
+              <div className="div-pgm">
+                <div className="overlay-row">
+                  30 Minutos a partir de <p>11:30 de segunda a sexta-feira</p>
+                </div>
+                <img src={trinta} className="img-row" />
               </div>
-              <img src={trinta} className="img-row" />
-            </div>
-            <div className="div-pgm">
-              <div className="overlay-row">
-                Guy Boaventura a partir de <p>12:00 de segunda a sexta-feira</p>
+            </a>
+            <a href="/programas/guyboaventura">
+              <div className="div-pgm">
+                <div className="overlay-row">
+                  Guy Boaventura a partir de{' '}
+                  <p>12:00 de segunda a sexta-feira</p>
+                </div>
+                <img src={guy} className="img-row" />
               </div>
-              <img src={guy} className="img-row" />
-            </div>
-            <div className="div-pgm">
-              <div className="overlay-row">
-                NTV News a partir de <p>19:00 de segunda a sábado</p>
+            </a>
+            <a href="/programas/ntvnews">
+              <div className="div-pgm">
+                <div className="overlay-row">
+                  NTV News a partir de <p>19:00 de segunda a sábado</p>
+                </div>
+                <img src={news} className="img-row" />
               </div>
-              <img src={news} className="img-row" />
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -44,30 +51,46 @@ export default function Programs() {
           <h3 className="fs-bold">ENTRETENIMENTO</h3>
         </div>
         <div className="second-row-pgms">
-          <div className="div-pgm">
-            <div className="overlay-row">
-              Mais Saúde a partir de <p>18:00 às terças-feiras</p>
+          <a href="/programas/maissaude">
+            <div className="div-pgm">
+              <div className="overlay-row">
+                <small>
+                  Mais Saúde a partir de <p>18:00 às terças-feiras</p>
+                </small>
+              </div>
+              <img src={saude} className="img-row" />
             </div>
-            <img src={saude} className="img-row" />
-          </div>
-          <div className="div-pgm">
-            <div className="overlay-row">
-              Espaço Feminino a partir de <p>18:00 às quartas-feiras</p>
+          </a>
+          <a href="/programas/espacofeminino">
+            <div className="div-pgm">
+              <div className="overlay-row">
+                <small>
+                  Espaço Feminino a partir de <p>18:00 às quartas-feiras</p>
+                </small>
+              </div>
+              <img src={ef} className="img-row" />
             </div>
-            <img src={ef} className="img-row" />
-          </div>
-          <div className="div-pgm">
-            <div className="overlay-row">
-              Buteco da Nossa a partir de <p>18:30 às quintas-feiras</p>
+          </a>
+          <a href="/programas/butecodanossa">
+            <div className="div-pgm">
+              <div className="overlay-row">
+                <small>
+                  Buteco da Nossa a partir de <p>18:30 às quintas-feiras</p>
+                </small>
+              </div>
+              <img src={buteco} className="img-row" />
             </div>
-            <img src={buteco} className="img-row" />
-          </div>
-          <div className="div-pgm">
-            <div className="overlay-row">
-              Opinião Regional a partir de <p>18:30 às sextas-feiras</p>
+          </a>
+          <a href="/programas/opiniaoregional">
+            <div className="div-pgm">
+              <div className="overlay-row">
+                <small>
+                  Opinião Regional a partir de <p>18:30 às sextas-feiras</p>
+                </small>
+              </div>
+              <img src={opiniao} className="img-row" />
             </div>
-            <img src={opiniao} className="img-row" />
-          </div>
+          </a>
         </div>
       </div>
     </ProgramsContainer>

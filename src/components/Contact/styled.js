@@ -10,7 +10,7 @@ export const ContactContainer = styled.div`
 
   .contato {
     background-color: #e6e2d3;
-    margin: 40px;
+    margin: 40px auto;
     border-radius: 20px;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -34,7 +34,6 @@ export const ContactContainer = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.2);
   }
 
   .top-inputs {
@@ -46,11 +45,12 @@ export const ContactContainer = styled.div`
   .form-mensagem {
     width: 100%;
     height: 100px;
+    text-align: start;
   }
 
   #form-contato button {
     text-align: center;
-    width: 450px;
+    width: 100%;
   }
 
   .contato-contato,

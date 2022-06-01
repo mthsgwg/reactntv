@@ -12,7 +12,7 @@ export default function Contact() {
   };
 
   return (
-    <ContactContainer>
+    <ContactContainer id="contato">
       <div></div>
       <div className="container-contact">
         <div className="contato">

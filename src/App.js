@@ -4,10 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './components/pages/Home';
 import Materias from './components/pages/Materias';
-import Programas from './components/pages/Programas';
 import NotFound from './components/pages/404';
 import MainNavbar from './components/Navbar';
 import Contact from './components/Contact';
+import Programas from './components/pages/Programas';
+import Trintaminutos from './components/pages/Programas/Trintaminutos';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/materias" element={<Materias />} />
         <Route path="/programas" element={<Programas />} />
+        <Route path="/programas/trintaminutos" element={<Trintaminutos />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Contact />

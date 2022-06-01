@@ -4,7 +4,12 @@ export const Container = styled.div`
   padding-top: 70px;
   width: 100%;
   height: 80%;
-  background-color: orange;
+  background: rgb(255, 193, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 193, 0, 1) 0%,
+    rgba(255, 124, 0, 1) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,10 +104,12 @@ export const SecondContainer = styled.div`
   }
 
   .head-scnd-page {
-    width: 90%;
+    width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 60px;
+    margin: 0 auto;
+    overflow: hidden;
   }
 
   .box-assista {
@@ -110,6 +117,7 @@ export const SecondContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 
   .box-gif {
@@ -119,6 +127,7 @@ export const SecondContainer = styled.div`
     align-items: center;
     justify-content: center;
     margin: 10px;
+    width: 100%;
   }
 
   .box-gif img {

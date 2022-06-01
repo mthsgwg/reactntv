@@ -3,7 +3,12 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   height: 80%;
-  background-color: #034f84;
+  background: rgb(27, 155, 207);
+  background: linear-gradient(
+    90deg,
+    rgba(27, 155, 207, 1) 0%,
+    rgba(3, 79, 132, 1) 51%
+  );
   display: grid;
   grid-template-columns: 1fr 5fr;
 
@@ -54,14 +59,17 @@ export const ContainerVideos = styled.div`
   .videos div {
     margin: 5px;
   }
+
   .top {
     display: flex;
     height: 60%;
     width: 100%;
+    align-items: center;
+    justify-content: center;
   }
   .a-top {
     width: 100%;
-    height: 100%;
+    height: 240px;
     box-shadow: 2px 2px 4px black;
   }
 
@@ -140,6 +148,16 @@ export const ContainerVideos = styled.div`
 
     .legenda {
       font-size: 0.7em;
+    }
+
+    .a-top {
+      height: 220px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .a-top {
+      height: 180px;
     }
   }
 `;

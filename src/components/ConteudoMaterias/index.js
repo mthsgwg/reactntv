@@ -171,7 +171,7 @@ export default function ConteudoMaterias() {
                   </a>
                 </div>
                 <div className="mais-materias">
-                  <a href="/">mais matérias</a>
+                  <a href="/materias">mais matérias</a>
                 </div>
               </ListaVideos>
             </section>

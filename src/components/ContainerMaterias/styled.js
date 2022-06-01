@@ -3,7 +3,12 @@ import styled from 'styled-components';
 export const Container = styled.div`
   height: 100%;
   padding-top: 70px;
-  background-color: #034f84;
+  background: rgb(3, 79, 132);
+  background: linear-gradient(
+    90deg,
+    rgba(3, 79, 132, 1) 56%,
+    rgba(27, 155, 207, 1) 100%
+  );
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -24,7 +29,7 @@ export const SectionSearch = styled.section`
   min-height: 80px;
 
   .search-materias {
-    font-size: 2em;
+    font-size: 3vw;
   }
 
   .search-button {
@@ -36,6 +41,10 @@ export const SectionSearch = styled.section`
   }
   .search-button button {
     width: 20%;
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
   }
 `;
 
@@ -65,5 +74,22 @@ export const SectionMaterias = styled.section`
     max-height: 100%;
     font-weight: 700;
     margin: 10px auto;
+  }
+
+  @media (max-width: 1200px) {
+    & {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 900px) {
+    & {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 550px) {
+    & {
+      grid-template-columns: 1fr;
+    }
   }
 `;
