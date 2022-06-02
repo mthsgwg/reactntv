@@ -1,16 +1,8 @@
 import React from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
 
 import { ContactContainer } from './styled';
 
 export default function Contact() {
-  const recaptchaRef = React.useRef();
-
-  const onSubmitWithReCAPTCHA = async () => {
-    const token = await recaptchaRef.current.executeAsync();
-    return token;
-  };
-
   return (
     <ContactContainer id="contato">
       <div></div>
@@ -19,7 +11,7 @@ export default function Contact() {
           <div className="contato-contato">
             <h3>contate-nos</h3>
             <div>
-              <form onSubmit={onSubmitWithReCAPTCHA} id="form-contato">
+              <form id="form-contato">
                 <div className="top-inputs">
                   <input
                     type={'text'}
@@ -47,11 +39,6 @@ export default function Contact() {
                   required
                 />
 
-                <ReCAPTCHA
-                  ref={recaptchaRef}
-                  size="invisible"
-                  sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                />
                 <button type="submit">Enviar</button>
               </form>
             </div>
