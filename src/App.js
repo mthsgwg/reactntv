@@ -9,6 +9,7 @@ import MainNavbar from './components/Navbar';
 import Contact from './components/Contact';
 import Programas from './components/pages/Programas';
 import Trintaminutos from './components/pages/Programas/Trintaminutos';
+import GuyBoaventura from './components/pages/Programas/GuyBoaventura';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/materias" element={<Materias />} />
         <Route path="/programas" element={<Programas />} />
         <Route path="/programas/trintaminutos" element={<Trintaminutos />} />
+        <Route path="/programas/guyboaventura" element={<GuyBoaventura />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Contact />

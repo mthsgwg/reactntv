@@ -4,13 +4,13 @@ import { ContainerMateria, WrapperMateria, WrapperOldMaterias } from './styled';
 
 import api from '../../services/api';
 
-export default function Trinta() {
+export default function Guy() {
   const [video, setVideo] = React.useState([]);
 
   React.useEffect(() => {
     async function getData() {
       const response = await api.get(
-        'https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyDaHQDAUz1WeUVFgxhYdbEUA-0eb2Am4Ig&part=snippet&playlistId=PLSmdHC4HiQ9InCLHRpBnS6qTHOcufwYe2',
+        'https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyDaHQDAUz1WeUVFgxhYdbEUA-0eb2Am4Ig&part=snippet&playlistId=PLSmdHC4HiQ9LDj1vAWqOFd0brss63rGO3',
       );
       setVideo(response.data);
     }
