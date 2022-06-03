@@ -31,6 +31,16 @@ export const WrapperMateria = styled.section`
     aspect-ratio: 16 / 9;
     width: 100%;
   }
+
+  .description-container {
+    background-color: rgba(255, 255, 255, 0.3);
+    height: fit-content;
+  }
+
+  .description {
+    margin-top: 20px;
+    white-space: pre-line;
+  }
 `;
 
 export const WrapperOldMaterias = styled.section`

@@ -5,16 +5,28 @@ import { ContainerMateria, WrapperMateria, WrapperOldMaterias } from './styled';
 import api from '../../services/api';
 
 export default function Trinta() {
+  const [currentVideo, setCurrentVideo] = React.useState({});
   const [video, setVideo] = React.useState([]);
 
+  // eslint-disable-next-line no-unused-vars
+  function toggleCurrentVideo(item, index) {
+    console.log(item);
+    const videos = video;
+    videos.items.push(currentVideo);
+    videos.items = videos.items.filter((videoItem) => videoItem.id !== item.id);
+    setVideo(videos);
+    setCurrentVideo(item);
+  }
+
   React.useEffect(() => {
-    async function getData() {
+    (async () => {
       const response = await api.get(
         'https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyDaHQDAUz1WeUVFgxhYdbEUA-0eb2Am4Ig&part=snippet&playlistId=PLSmdHC4HiQ9InCLHRpBnS6qTHOcufwYe2',
       );
+
       setVideo(response.data);
-    }
-    getData();
+      setCurrentVideo(response.data.items[0]);
+    })();
   }, []);
 
   return (
@@ -23,35 +35,30 @@ export default function Trinta() {
       <ContainerMateria>
         <WrapperMateria>
           <div className="container">
-            {video.items?.slice(0, 1).map((item) => {
-              const { id, snippet = {} } = item;
-              const { title, resourceId = {}, description } = snippet;
-              const { videoId = {} } = resourceId;
-              const urlYoutube = `https://www.youtube.com/embed/${videoId}`;
-
-              return (
-                <div className="grid-programa" key={id}>
-                  <div className="player">
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src={urlYoutube}
-                      title="YouTube video player"
-                      frameBorder="0"
-                      allowFullScreen
-                    />
-                  </div>
-                  <div>
-                    <h1 className="text-center text-dark fw-bold">{title}</h1>
-                    <p>{description}</p>
-                  </div>
-                </div>
-              );
-            })}
+            <div className="grid-programa">
+              <div className="player">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${currentVideo?.snippet?.resourceId?.videoId}`}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allowFullScreen
+                />
+              </div>
+              <div className="description-container">
+                <h1 className="text-center text-dark fw-bold">
+                  {currentVideo?.snippet?.title}
+                </h1>
+                <p className="description">
+                  {currentVideo?.snippet?.description}
+                </p>
+              </div>
+            </div>
           </div>
         </WrapperMateria>
         <WrapperOldMaterias>
-          {video.items?.slice(1, 5).map((item) => {
+          {video.items?.slice(1, 5).map((item, index) => {
             const { id, snippet = {} } = item;
             const { title, thumbnails = {}, resourceId = {} } = snippet;
             const { medium = {} } = thumbnails;
@@ -59,7 +66,11 @@ export default function Trinta() {
             const urlYoutube = `https://www.youtube.com/embed/${videoId}`;
 
             return (
-              <div className="container-materia" key={id}>
+              <div
+                className="container-materia"
+                key={id}
+                onClick={() => toggleCurrentVideo(item, index)}
+              >
                 <div className="">
                   <img
                     width={medium.width}
@@ -69,12 +80,12 @@ export default function Trinta() {
                     className="api-img"
                   />
                 </div>
-                <a
+                <p
                   className="text-center text-dark fw-bold pt-2 link-older-content"
                   href={urlYoutube}
                 >
                   {title}
-                </a>
+                </p>
               </div>
             );
           })}
