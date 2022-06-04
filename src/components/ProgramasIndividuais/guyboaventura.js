@@ -10,7 +10,7 @@ export default function Guy() {
   React.useEffect(() => {
     async function getData() {
       const response = await api.get(
-        'https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyDaHQDAUz1WeUVFgxhYdbEUA-0eb2Am4Ig&part=snippet&playlistId=PLSmdHC4HiQ9LDj1vAWqOFd0brss63rGO3',
+        'https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyDaHQDAUz1WeUVFgxhYdbEUA-0eb2Am4Ig&part=snippet&playlistId=PLSmdHC4HiQ9LDj1vAWqOFd0brss63rGO3&maxResults=5',
       );
       setVideo(response.data);
     }

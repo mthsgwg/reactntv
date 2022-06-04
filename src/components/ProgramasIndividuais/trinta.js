@@ -1,36 +1,64 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useState, useEffect } from 'react';
 
 import { ContainerMateria, WrapperMateria, WrapperOldMaterias } from './styled';
+
+import Posts from '../Pagination/Posts';
+import Pagination from '../Pagination/Pagination';
 
 import api from '../../services/api';
 
 export default function Trinta() {
-  const [currentVideo, setCurrentVideo] = React.useState({});
-  const [video, setVideo] = React.useState([]);
+  const [currentVideo, setCurrentVideo] = useState([]);
+  const [video, setVideo] = useState([]);
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(10);
+  const [token, setToken] = useState('');
 
-  // eslint-disable-next-line no-unused-vars
   function toggleCurrentVideo(item, index) {
-    console.log(item);
     const videos = video;
     videos.items.push(currentVideo);
-    videos.items = videos.items.filter((videoItem) => videoItem.id !== item.id);
+    // videos.items = videos.items.filter((videoItem) => videoItem.id != item.id);
     setVideo(videos);
     setCurrentVideo(item);
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     (async () => {
       const response = await api.get(
-        'https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyDaHQDAUz1WeUVFgxhYdbEUA-0eb2Am4Ig&part=snippet&playlistId=PLSmdHC4HiQ9InCLHRpBnS6qTHOcufwYe2',
+        `https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyDaHQDAUz1WeUVFgxhYdbEUA-0eb2Am4Ig&part=snippet&playlistId=PLSmdHC4HiQ9JIuzCjmm0MirA6FvHzAztl&maxResults=500&pageToken=${token}`,
       );
 
       setVideo(response.data);
       setCurrentVideo(response.data.items[0]);
+      setPosts(response.data.items);
+      setLoading(false);
+      setToken(response.data.nextPageToken);
     })();
   }, []);
 
+  async function MakeNewRequest(posts) {
+    const response = await api.get(
+      `https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyDaHQDAUz1WeUVFgxhYdbEUA-0eb2Am4Ig&part=snippet&playlistId=PLSmdHC4HiQ9JIuzCjmm0MirA6FvHzAztl&maxResults=500&pageToken=${token}`,
+    );
+    const addPosts = [...posts, ...response.data.items];
+    setPosts(addPosts);
+    const newToken = response.data.nextPageToken;
+    setToken(newToken);
+  }
+
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
-    <>
+    <div>
       <div className="spacing" />
       <ContainerMateria>
         <WrapperMateria>
@@ -58,7 +86,7 @@ export default function Trinta() {
           </div>
         </WrapperMateria>
         <WrapperOldMaterias>
-          {video.items?.slice(1, 5).map((item, index) => {
+          {video.items?.slice(0, 5).map((item, index) => {
             const { id, snippet = {} } = item;
             const { title, thumbnails = {}, resourceId = {} } = snippet;
             const { medium = {} } = thumbnails;
@@ -67,7 +95,7 @@ export default function Trinta() {
 
             return (
               <div
-                className="container-materia"
+                className="container-materia list-group-item-box"
                 key={id}
                 onClick={() => toggleCurrentVideo(item, index)}
               >
@@ -90,97 +118,31 @@ export default function Trinta() {
             );
           })}
         </WrapperOldMaterias>
+        <div className="container mt-5 ">
+          <ul className="list-group mb-4">
+            {currentPosts.map((post) => (
+              <li
+                key={post?.id}
+                className="list-group-item"
+                onClick={() => toggleCurrentVideo(post)}
+              >
+                {post?.snippet?.title}
+              </li>
+            ))}
+          </ul>
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={posts.length}
+            paginate={paginate}
+            className=""
+          />
+          <div className="d-flex align-items-center justify-content-center overflow-auto ">
+            <button onClick={() => MakeNewRequest(posts)} className="mb-3">
+              Carregar vídeos anteriores
+            </button>
+          </div>
+        </div>
       </ContainerMateria>
-    </>
+    </div>
   );
 }
-
-/*
- CASO NAO FOR UTILIZAR A API
-
-<div className="">
-                <div className="player">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/39O4EQq83aM"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
-              <div>
-                <h1 className="text-center text-dark fw-bold">
-                  30 MINUTOS 08 02 2022
-                </h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam feugiat tellus eu elit eleifend aliquet ac a felis.
-                  Donec in ipsum egestas, suscipit ligula eu, rhoncus metus.
-                  Nulla bibendum tellus ut bibendum faucibus. Aenean dictum erat
-                  dolor, eu ultrices dui consectetur nec. Quisque blandit eget
-                  ex id maximus. Orci varius natoque penatibus et magnis dis
-                  parturient montes, nascetur ridiculus mus. Sed laoreet urna
-                  leo, eget suscipit ligula imperdiet vel. Class aptent taciti
-                  sociosqu ad litora torquent per conubia nostra, per inceptos
-                  himenaeos. Fusce quis nibh vitae magna euismod vulputate.
-                  Maecenas vehicula laoreet volutpat. Nullam mattis auctor lorem
-                  a venenatis. Donec magna nunc, volutpat eu ligula a, mollis
-                </p>
-              </div>
-
-          <div className="container-materia">
-            <div className="player">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/0og3GXtfOzc"
-                title="YouTube video player"
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <p>30 MINUTOS 07 02 2022</p>
-          </div>
-          <div className="container-materia">
-            <div className="player">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/0og3GXtfOzc"
-                title="YouTube video player"
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <p>30 MINUTOS 07 02 2022</p>
-          </div>
-          <div className="container-materia">
-            <div className="player">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/0og3GXtfOzc"
-                title="YouTube video player"
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <p>30 MINUTOS 07 02 2022</p>
-          </div>
-          <div className="container-materia">
-            <div className="player">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/0og3GXtfOzc"
-                title="YouTube video player"
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <p>30 MINUTOS 07 02 2022</p>
-          </div>
-
-          */

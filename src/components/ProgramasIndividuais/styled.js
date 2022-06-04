@@ -8,6 +8,11 @@ export const ContainerMateria = styled.section`
   justify-content: center;
   background-color: #034f84;
   flex-wrap: wrap;
+
+  .list-group-item:hover,
+  .list-group-item-box:hover {
+    cursor: pointer;
+  }
 `;
 
 export const WrapperMateria = styled.section`
