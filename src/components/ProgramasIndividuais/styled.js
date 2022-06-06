@@ -13,11 +13,24 @@ export const ContainerMateria = styled.section`
   .list-group-item-box:hover {
     cursor: pointer;
   }
+
+  .container-second-api {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .background-color-right {
+    background-color: #e6e2d3;
+    border-radius: 5px;
+    padding: 10px;
+  }
 `;
 
 export const WrapperMateria = styled.section`
   width: 80%;
-  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,21 +43,41 @@ export const WrapperMateria = styled.section`
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 40px;
-  }
-
-  .player {
-    aspect-ratio: 16 / 9;
-    width: 100%;
+    width: 90%;
+    height: max-content;
   }
 
   .description-container {
     background-color: rgba(255, 255, 255, 0.3);
     height: fit-content;
+    min-height: 40vh;
   }
 
   .description {
     margin-top: 20px;
     white-space: pre-line;
+    font-size: 1.5em;
+  }
+
+  @media (max-width: 1200px) {
+    .grid-programa {
+      grid-template-columns: 1fr;
+    }
+    .description-container {
+      height: 100%;
+      width: 100%;
+      overflow-y: auto;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .grid-programa {
+      grid-template-columns: 1fr;
+    }
+
+    .description {
+      font-size: 1em;
+    }
   }
 `;
 

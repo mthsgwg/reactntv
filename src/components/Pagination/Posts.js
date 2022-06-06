@@ -7,13 +7,15 @@ const Posts = ({ posts, loading }) => {
   }
 
   return (
-    <ul className="list-group mb-4">
-      {posts.map((post) => (
-        <li key={post?.id} className="list-group-item">
-          {post?.snippet?.title}
-        </li>
-      ))}
-    </ul>
+    <div className="container">
+      <div className="row">
+        {posts.map((post) => (
+          <div key={post?.id} className="col-sm">
+            {post?.snippet?.title}
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 
