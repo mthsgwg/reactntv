@@ -57,9 +57,6 @@ export const ContainerVideos = styled.div`
     height: fit-content;
   }
 
-  .placeholder-video {
-  }
-
   .top {
     display: flex;
     height: 60%;
@@ -72,15 +69,17 @@ export const ContainerVideos = styled.div`
     height: 250px;
     box-shadow: 2px 2px 4px black;
     margin: 5px;
+    background-color: #f2f2f2;
+    overflow-y: hidden;
   }
 
   .legenda {
     z-index: 10;
     text-align: center;
     width: 100%;
-    height: 100%;
-    max-height: 100%;
+    height: inherit;
     font-weight: 700;
+    font-size: 1em;
   }
 
   .video-thumb {

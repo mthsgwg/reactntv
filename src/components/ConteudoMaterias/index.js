@@ -1,114 +1,74 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import secondApi from '../../services/secondApi';
 
 import { Container, ContainerVideos, ListaVideos } from './styled';
-import first from '../../images/materias/1.jpg';
-import second from '../../images/materias/2.jpg';
-import third from '../../images/materias/3.jpg';
-/*
-import fourth from '../../images/materias/4.jpg';
-import fifth from '../../images/materias/5.jpg';
-import sixth from '../../images/materias/6.jpg';
-import seventh from '../../images/materias/7.jpg';
-*/
+
 export default function ConteudoMaterias() {
-  const red = {
-    background: 'white',
-  };
-  const blue = {
-    background: 'white',
-  };
-  const yellow = {
-    background: 'white',
-  };
+  const [materias, setMaterias] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const response = await secondApi.get();
+      const map = response.data;
+      const result = Object.values(map);
+      setMaterias(result);
+    })();
+  }, []);
+
   return (
     <Container>
+      <ul></ul>
       <div className="materias-videos">
         <ContainerVideos>
           <section className="videos">
             <div className="top">
-              <div className="a-top" style={red}>
-                <div className="placeholder-video">
-                  <img src={first} className="video-thumb" />
-                  <p className="legenda">
-                    Casos de covid disparam em Patos de Minas
-                  </p>
-                </div>
-              </div>
-              <div className="a-top" style={blue}>
-                <div className="placeholder-video">
-                  <img src={second} />
-                  <p className="legenda">
-                    Moradores pedem fazem denúncia de mau-cheiro no bairro
-                    quebec
-                  </p>
-                </div>
-              </div>
-              <div className="a-top" style={yellow}>
-                <div className="placeholder-video">
-                  <img src={third} />
-                  <p className="legenda">
-                    Encontro de carros esportivos é realizado nessa sexta-feira
-                    em patos de minas
-                  </p>
-                </div>
-              </div>
+              {materias.slice(0, 3).map((materia) => {
+                return (
+                  <div key={materia.url} className="a-top">
+                    <div>
+                      <img
+                        src={decodeURIComponent(materia.imagem)}
+                        className="video-thumb"
+                      />
+                      <p className="legenda">{materia.titulo}</p>
+                      {console.log(decodeURIComponent(materia.imagem))}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
             <div className="top">
-              <div className="a-top" style={red}>
-                <div className="placeholder-video">
-                  <img src={first} className="video-thumb" />
-                  <p className="legenda">
-                    Casos de covid disparam em Patos de Minas
-                  </p>
-                </div>
-              </div>
-              <div className="a-top" style={blue}>
-                <div className="placeholder-video">
-                  <img src={second} />
-                  <p className="legenda">
-                    Moradores pedem fazem denúncia de mau-cheiro no bairro
-                    quebec
-                  </p>
-                </div>
-              </div>
-              <div className="a-top" style={yellow}>
-                <div className="placeholder-video">
-                  <img src={third} />
-                  <p className="legenda">
-                    Encontro de carros esportivos é realizado nessa sexta-feira
-                    em patos de minas
-                  </p>
-                </div>
-              </div>
+              {materias.slice(3, 6).map((materia) => {
+                return (
+                  <div key={materia.url} className="a-top">
+                    <div>
+                      <img
+                        src={decodeURIComponent(materia.imagem)}
+                        className="video-thumb"
+                      />
+                      <p className="legenda">{materia.titulo}</p>
+                      {console.log(decodeURIComponent(materia.imagem))}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
             <div className="top">
-              <div className="a-top" style={red}>
-                <div className="placeholder-video">
-                  <img src={first} className="video-thumb" />
-                  <p className="legenda">
-                    Casos de covid disparam em Patos de Minas
-                  </p>
-                </div>
-              </div>
-              <div className="a-top" style={blue}>
-                <div className="placeholder-video">
-                  <img src={second} />
-                  <p className="legenda">
-                    Moradores pedem fazem denúncia de mau-cheiro no bairro
-                    quebec
-                  </p>
-                </div>
-              </div>
-              <div className="a-top" style={yellow}>
-                <div className="placeholder-video">
-                  <img src={third} />
-                  <p className="legenda">
-                    Encontro de carros esportivos é realizado nessa sexta-feira
-                    em patos de minas
-                  </p>
-                </div>
-              </div>
+              {materias.slice(6, 9).map((materia) => {
+                return (
+                  <div key={materia.url} className="a-top">
+                    <div>
+                      <img
+                        src={decodeURIComponent(materia.imagem)}
+                        className="video-thumb"
+                      />
+                      <p className="legenda">{materia.titulo}</p>
+                      {console.log(decodeURIComponent(materia.imagem))}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </section>
           <div className="older-content">
@@ -203,6 +163,9 @@ export default function ConteudoMaterias() {
         </ContainerVideos>
       </div>
       <div className="materias"></div>
+      <section>
+        <ul>oi</ul>
+      </section>
     </Container>
   );
 }

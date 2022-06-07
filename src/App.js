@@ -10,6 +10,10 @@ import Contact from './components/Contact';
 import Programas from './components/pages/Programas';
 import Trintaminutos from './components/pages/Programas/Trintaminutos';
 import GuyBoaventura from './components/pages/Programas/GuyBoaventura';
+import NtvNews from './components/pages/Programas/NtvNews';
+import MaisSaude from './components/pages/Programas/MaisSaude';
+import EspacoFeminino from './components/pages/Programas/EspacoFeminino';
+import ButecoNossa from './components/pages/Programas/ButecoNossa';
 
 function App() {
   return (
@@ -28,6 +32,18 @@ function App() {
           exact
           path="/programas/guyboaventura"
           element={<GuyBoaventura />}
+        />
+        <Route exact path="/programas/ntvnews" element={<NtvNews />} />
+        <Route exact path="/programas/maissaude" element={<MaisSaude />} />
+        <Route
+          exact
+          path="/programas/espacofeminino"
+          element={<EspacoFeminino />}
+        />
+        <Route
+          exact
+          path="/programas/butecodanossa"
+          element={<ButecoNossa />}
         />
         <Route path="*" element={<NotFound />} />
       </Routes>

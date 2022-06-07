@@ -56,7 +56,7 @@ export const WrapperMateria = styled.section`
   .description {
     margin-top: 20px;
     white-space: pre-line;
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 
   @media (max-width: 1200px) {

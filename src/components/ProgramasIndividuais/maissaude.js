@@ -5,7 +5,7 @@ import { ContainerMateria, WrapperMateria, WrapperOldMaterias } from './styled';
 import Pagination from '../Pagination/Pagination';
 import api from '../../services/api';
 
-export default function Guy() {
+export default function Saude() {
   const [currentVideo, setCurrentVideo] = useState([]);
   const [video, setVideo] = useState([]);
   const [posts, setPosts] = useState([]);
@@ -26,7 +26,7 @@ export default function Guy() {
   useEffect(() => {
     (async () => {
       const response = await api.get(
-        `/youtube/v3/playlistItems?key=AIzaSyDaHQDAUz1WeUVFgxhYdbEUA-0eb2Am4Ig&part=snippet&playlistId=PLSmdHC4HiQ9JxYHuP17jFiHpFrmf2TJS0&maxResults=500`,
+        `/youtube/v3/playlistItems?key=AIzaSyDaHQDAUz1WeUVFgxhYdbEUA-0eb2Am4Ig&part=snippet&playlistId=PLSmdHC4HiQ9Lm-zXsng_pmXgnvqtILDhQ&maxResults=500`,
       );
 
       setVideo(response.data);
@@ -41,7 +41,7 @@ export default function Guy() {
   async function MakeNewRequest(posts) {
     setLoading(true);
     const response = await api.get(
-      `/youtube/v3/playlistItems?key=${process.env.REACT_APP_API_KEY}&part=snippet&playlistId=PLSmdHC4HiQ9JxYHuP17jFiHpFrmf2TJS0&maxResults=500&pageToken=${token}`,
+      `/youtube/v3/playlistItems?key=${process.env.REACT_APP_API_KEY}&part=snippet&playlistId=PLSmdHC4HiQ9Lm-zXsng_pmXgnvqtILDhQ&maxResults=500&pageToken=${token}`,
     );
     const addPosts = [...posts, ...response.data.items];
     setPosts(addPosts);

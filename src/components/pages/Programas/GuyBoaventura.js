@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Guy from '../../ProgramasIndividuais/guyboaventura';
+import News from '../../ProgramasIndividuais/ntvnews';
 
 export default function GuyBoaventura() {
   return (
     <>
-      <Guy />
+      <News />
     </>
   );
 }
