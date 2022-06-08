@@ -18,7 +18,6 @@ export default function ConteudoMaterias() {
 
   return (
     <Container>
-      <ul></ul>
       <div className="materias-videos">
         <ContainerVideos>
           <section className="videos">
@@ -32,7 +31,6 @@ export default function ConteudoMaterias() {
                         className="video-thumb"
                       />
                       <p className="legenda">{materia.titulo}</p>
-                      {console.log(decodeURIComponent(materia.imagem))}
                     </div>
                   </div>
                 );
@@ -48,7 +46,6 @@ export default function ConteudoMaterias() {
                         className="video-thumb"
                       />
                       <p className="legenda">{materia.titulo}</p>
-                      {console.log(decodeURIComponent(materia.imagem))}
                     </div>
                   </div>
                 );
@@ -64,7 +61,6 @@ export default function ConteudoMaterias() {
                         className="video-thumb"
                       />
                       <p className="legenda">{materia.titulo}</p>
-                      {console.log(decodeURIComponent(materia.imagem))}
                     </div>
                   </div>
                 );
@@ -81,79 +77,13 @@ export default function ConteudoMaterias() {
               </div>
               <p className="title-older-content">Veja +!</p>
               <ListaVideos>
-                <div className="video-list">
-                  <a href="s">
-                    Coleta de lixo no feriado será feita apenas na região
-                    central e hospitais
-                  </a>
-                </div>
-                <div className="video-list">
-                  <a href="s">
-                    Coleta de lixo no feriado será feita apenas na região
-                    central e hospitais
-                  </a>
-                </div>
-                <div className="video-list">
-                  <a href="s">
-                    Coleta de lixo no feriado será feita apenas na região
-                    central e hospitais{' '}
-                  </a>
-                </div>
-                <div className="video-list">
-                  <a href="s">
-                    Coleta de lixo no feriado será feita apenas na região
-                    central e hospitais
-                  </a>
-                </div>
-                <div className="video-list">
-                  <a href="s">
-                    Coleta de lixo no feriado será feita apenas na região
-                    central e hospitais
-                  </a>
-                </div>
-                <div className="video-list">
-                  <a href="s">
-                    Coleta de lixo no feriado será feita apenas na região
-                    central e hospitais
-                  </a>
-                </div>
-                <div className="video-list">
-                  <a href="s">
-                    Coleta de lixo no feriado será feita apenas na região
-                    central e hospitais
-                  </a>
-                </div>
-                <div className="video-list">
-                  <a href="s">
-                    Coleta de lixo no feriado será feita apenas na região
-                    central e hospitais
-                  </a>
-                </div>
-                <div className="video-list">
-                  <a href="s">
-                    Coleta de lixo no feriado será feita apenas na região
-                    central e hospitais
-                  </a>
-                </div>
-                <div className="video-list">
-                  <a href="s">
-                    Coleta de lixo no feriado será feita apenas na região
-                    central e hospitais
-                  </a>
-                </div>
-                <div className="video-list">
-                  <a href="s">
-                    Coleta de lixo no feriado será feita apenas na região
-                    central e hospitais
-                  </a>
-                </div>
-                <div className="video-list">
-                  <a href="s">
-                    Coleta de lixo no feriado será feita apenas na região
-                    central e hospitais
-                  </a>
-                </div>
-
+                {materias.slice(9, 17).map((materia) => {
+                  return (
+                    <div className="video-list" key={materia.url}>
+                      <a href="">{materia.titulo}</a>
+                    </div>
+                  );
+                })}
                 <div className="mais-materias">
                   <a href="/materias">mais matérias</a>
                 </div>
@@ -162,10 +92,6 @@ export default function ConteudoMaterias() {
           </div>
         </ContainerVideos>
       </div>
-      <div className="materias"></div>
-      <section>
-        <ul>oi</ul>
-      </section>
     </Container>
   );
 }

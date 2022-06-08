@@ -199,6 +199,7 @@ export const ListaVideos = styled.div`
   .video-list a {
     text-decoration: none;
     color: #303030;
-    padding: 5px;
+    font-size: 0.8em;
+    text-align: left;
   }
 `;

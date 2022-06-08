@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import secondApi from '../../services/secondApi';
 
 import { Container, SectionMaterias, SectionSearch } from './styled';
-
-import first from '../../images/materias/1.jpg';
 import { FaSearch } from 'react-icons/fa';
 
 export default function ContainerMaterias() {
+  const [materias, setMaterias] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const response = await secondApi.get();
+      const map = response.data;
+      const result = Object.values(map);
+      setMaterias(result);
+    })();
+  }, []);
+
   return (
     <Container>
       <div className="spacing" />
@@ -21,86 +31,14 @@ export default function ContainerMaterias() {
       </SectionSearch>
 
       <SectionMaterias>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet </p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
-        <div className="portrait top a-top">
-          <img src={first} />
-          <p className="legenda"> lorem ipsum dolor sit amoet</p>
-        </div>
+        {materias.map((materia) => {
+          return (
+            <div className="portrait top a-top" key={materias.url}>
+              <img src={decodeURIComponent(materia.imagem)} />
+              <p className="legenda"> {materia.titulo}</p>
+            </div>
+          );
+        })}
       </SectionMaterias>
     </Container>
   );
