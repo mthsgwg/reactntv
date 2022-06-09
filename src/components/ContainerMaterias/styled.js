@@ -11,10 +11,68 @@ export const Container = styled.div`
   );
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
 
   .spacing {
     height: 3vh;
+  }
+
+  .top-materia {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 2%;
+    height: fit-content;
+  }
+
+  .player {
+    aspect-ratio: 16 / 9;
+  }
+
+  .grid-programa {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    width: 90%;
+    height: max-content;
+  }
+
+  .description-container {
+    background-color: rgba(255, 255, 255, 0.3);
+    height: fit-content;
+  }
+
+  .description {
+    margin-top: 20px;
+    white-space: pre-line;
+    font-size: 1.2em;
+  }
+
+  @media (max-width: 1200px) {
+    .grid-programa {
+      grid-template-columns: 1fr;
+    }
+    .description-container {
+      height: 100%;
+      width: 100%;
+      overflow-y: auto;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .grid-programa {
+      grid-template-columns: 1fr;
+    }
+
+    .description {
+      font-size: 1em;
+    }
   }
 `;
 
@@ -63,8 +121,15 @@ export const SectionMaterias = styled.section`
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    overflow-x: auto;
     overflow-y: hidden;
+  }
+
+  .portrait:hover {
+    cursor: pointer;
+  }
+
+  .img-materias {
+    width: 100%;
   }
 
   .legenda {

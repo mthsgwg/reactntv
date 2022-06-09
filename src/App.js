@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import ScrollToTop from './ScrollToTop';
 import Home from './components/pages/Home';
 import Materias from './components/pages/Materias';
 import NotFound from './components/pages/404';
@@ -19,34 +20,36 @@ function App() {
   return (
     <Router>
       <MainNavbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/materias" element={<Materias />} />
-        <Route path="/programas" element={<Programas />} />
-        <Route
-          exact
-          path="/programas/trintaminutos"
-          element={<Trintaminutos />}
-        />
-        <Route
-          exact
-          path="/programas/guyboaventura"
-          element={<GuyBoaventura />}
-        />
-        <Route exact path="/programas/ntvnews" element={<NtvNews />} />
-        <Route exact path="/programas/maissaude" element={<MaisSaude />} />
-        <Route
-          exact
-          path="/programas/espacofeminino"
-          element={<EspacoFeminino />}
-        />
-        <Route
-          exact
-          path="/programas/butecodanossa"
-          element={<ButecoNossa />}
-        />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/materias" element={<Materias />} />
+          <Route path="/programas" element={<Programas />} />
+          <Route
+            exact
+            path="/programas/trintaminutos"
+            element={<Trintaminutos />}
+          />
+          <Route
+            exact
+            path="/programas/guyboaventura"
+            element={<GuyBoaventura />}
+          />
+          <Route exact path="/programas/ntvnews" element={<NtvNews />} />
+          <Route exact path="/programas/maissaude" element={<MaisSaude />} />
+          <Route
+            exact
+            path="/programas/espacofeminino"
+            element={<EspacoFeminino />}
+          />
+          <Route
+            exact
+            path="/programas/butecodanossa"
+            element={<ButecoNossa />}
+          />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </ScrollToTop>
       <Contact />
     </Router>
   );

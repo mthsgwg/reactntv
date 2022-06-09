@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 
-import { ContainerMateria, WrapperMateria, WrapperOldMaterias } from './styled';
+import { ContainerMateria, WrapperMateria } from './styled';
 import Pagination from '../Pagination/Pagination';
 import api from '../../services/api';
 
@@ -84,40 +84,6 @@ export default function Trinta() {
             </div>
           </div>
         </WrapperMateria>
-        {
-          // <WrapperOldMaterias>
-          //   {video.items?.slice(0, 4).map((item, index) => {
-          //     const { id, snippet = {} } = item;
-          //     const { title, thumbnails = {}, resourceId = {} } = snippet;
-          //     const { medium = {} } = thumbnails;
-          //     const { videoId = {} } = resourceId;
-          //     const urlYoutube = `https://www.youtube.com/embed/${videoId}`;
-          //     return (
-          //       <div
-          //         className="container-materia list-group-item-box"
-          //         key={id}
-          //         onClick={() => toggleCurrentVideo(item, index)}
-          //       >
-          //         <div className="">
-          //           <img
-          //             width={medium.width}
-          //             height={medium.height}
-          //             src={medium.url}
-          //             alt=""
-          //             className="api-img"
-          //           />
-          //         </div>
-          //         <p
-          //           className="text-center text-dark fw-bold pt-2 link-older-content"
-          //           href={urlYoutube}
-          //         >
-          //           {title}
-          //         </p>
-          //       </div>
-          //     );
-          //   })}
-          // </WrapperOldMaterias>
-        }
 
         <div className="container-second-api mt-5">
           <div className=" mb-4 d-flex flex-wrap justify-content-around background-color-right">

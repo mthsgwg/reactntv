@@ -25,6 +25,11 @@ export const Container = styled.div`
     text-align: center;
   }
 
+  .no-decorations {
+    color: #000;
+    text-decoration: none;
+  }
+
   .materias-videos {
     overflow: hidden;
     padding: 20px;
@@ -63,9 +68,10 @@ export const ContainerVideos = styled.div`
     width: 100%;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
   }
   .a-top {
-    width: 100%;
+    width: 300px;
     height: 250px;
     box-shadow: 2px 2px 4px black;
     margin: 5px;

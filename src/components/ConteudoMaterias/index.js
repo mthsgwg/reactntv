@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import secondApi from '../../services/secondApi';
+import { Link } from 'react-router-dom';
 
 import { Container, ContainerVideos, ListaVideos } from './styled';
 
@@ -22,46 +23,20 @@ export default function ConteudoMaterias() {
         <ContainerVideos>
           <section className="videos">
             <div className="top">
-              {materias.slice(0, 3).map((materia) => {
+              {materias.slice(0, 9).map((materia) => {
                 return (
                   <div key={materia.url} className="a-top">
-                    <div>
+                    <Link
+                      to={'/materias'}
+                      state={{ materias: materia }}
+                      className="no-decorations"
+                    >
                       <img
                         src={decodeURIComponent(materia.imagem)}
                         className="video-thumb"
                       />
                       <p className="legenda">{materia.titulo}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="top">
-              {materias.slice(3, 6).map((materia) => {
-                return (
-                  <div key={materia.url} className="a-top">
-                    <div>
-                      <img
-                        src={decodeURIComponent(materia.imagem)}
-                        className="video-thumb"
-                      />
-                      <p className="legenda">{materia.titulo}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="top">
-              {materias.slice(6, 9).map((materia) => {
-                return (
-                  <div key={materia.url} className="a-top">
-                    <div>
-                      <img
-                        src={decodeURIComponent(materia.imagem)}
-                        className="video-thumb"
-                      />
-                      <p className="legenda">{materia.titulo}</p>
-                    </div>
+                    </Link>
                   </div>
                 );
               })}
@@ -80,7 +55,13 @@ export default function ConteudoMaterias() {
                 {materias.slice(9, 17).map((materia) => {
                   return (
                     <div className="video-list" key={materia.url}>
-                      <a href="">{materia.titulo}</a>
+                      <Link
+                        to={'/materias'}
+                        state={{ materias: materia }}
+                        className="no-decorations"
+                      >
+                        <p>{materia.titulo}</p>
+                      </Link>
                     </div>
                   );
                 })}
