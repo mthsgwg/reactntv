@@ -13,9 +13,6 @@ export default function MainNavbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/" className="fw-bold fs-3 mx-5">
-              home
-            </Nav.Link>
             <Nav.Link href="/materias" className="fw-bold fs-3 mx-5">
               materias
             </Nav.Link>

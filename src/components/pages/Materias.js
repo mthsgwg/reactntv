@@ -5,8 +5,7 @@ import ContainerMaterias from '../ContainerMaterias';
 
 export default function Materias() {
   const location = useLocation();
-  // console.log(location.state.);
-  if (location.state.materias) {
+  if (location.state) {
     return <ContainerMaterias materiaProp={location.state.materias} />;
   } else return <ContainerMaterias></ContainerMaterias>;
 }
