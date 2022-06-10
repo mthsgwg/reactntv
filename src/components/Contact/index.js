@@ -5,7 +5,6 @@ import { ContactContainer } from './styled';
 export default function Contact() {
   return (
     <ContactContainer id="contato">
-      <div></div>
       <div className="container-contact">
         <div className="contato">
           <div className="contato-contato">
@@ -68,7 +67,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <div></div>
     </ContactContainer>
   );
 }

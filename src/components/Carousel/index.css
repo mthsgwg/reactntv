@@ -1,24 +1,13 @@
 .carousel-container {
-  width: 60%;
+  width: 90%;
+  min-height: max-content;
 }
 
-.carousel {
-  text-align: center;
-  height: auto;
-}
-
-.carousel-slider {
-  width: 100% !important;
-  aspect-ratio: 16 / 9 !important;
-}
-
-.carousel .thumb {
-  min-width: 9.5%;
-  height: auto;
-  box-shadow: 0 1px 4px black;
-  border-radius: 4px;
+.swiper-slide {
+  width: auto;
 }
 
 .legend {
-  font-size: 1em !important;
+  text-align: center;
+  padding-top: 20px;
 }

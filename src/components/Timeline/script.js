@@ -6,7 +6,7 @@ export function getTime() {
 
   switch (true) {
     case dateHour >= 22 && minutos >= 15:
-      return 100;
+      return 110;
 
     case dateHour >= 21 && minutos >= 15:
       return 93;
@@ -23,8 +23,8 @@ export function getTime() {
     case dateHour >= 18 && minutos >= 0:
       return 63;
 
-    case dateHour >= 15 && minutos >= 0:
-      return 54;
+    case dateHour >= 14 && minutos >= 30:
+      return 53;
 
     case dateHour >= 14 && minutos >= 15:
       return 45;

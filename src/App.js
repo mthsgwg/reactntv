@@ -7,7 +7,7 @@ import Home from './components/pages/Home';
 import Materias from './components/pages/Materias';
 import NotFound from './components/pages/404';
 import MainNavbar from './components/Navbar';
-import Contact from './components/Contact';
+import Contato from './components/pages/Contato';
 import Programas from './components/pages/Programas';
 import Trintaminutos from './components/pages/Programas/Trintaminutos';
 import GuyBoaventura from './components/pages/Programas/GuyBoaventura';
@@ -47,10 +47,10 @@ function App() {
             path="/programas/butecodanossa"
             element={<ButecoNossa />}
           />
+          <Route exact path="/contato" element={<Contato />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ScrollToTop>
-      <Contact />
     </Router>
   );
 }

@@ -94,9 +94,10 @@ export const ContainerVideos = styled.div`
   }
 
   .older-content {
-    width: 40%;
-    min-width: 40%;
-    max-width: 40%;
+    width: 40vw;
+    min-width: 500px;
+    max-width: 40vw;
+    height: fit-content;
 
     background-color: white;
     margin: 20px;
@@ -137,7 +138,7 @@ export const ContainerVideos = styled.div`
     color: #303030;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     .videos {
       max-width: 100%;
       min-width: 100%;
@@ -153,7 +154,6 @@ export const ContainerVideos = styled.div`
     .legenda {
       font-size: 0.7em;
     }
-
     .a-top {
       height: 220px;
     }
@@ -161,7 +161,7 @@ export const ContainerVideos = styled.div`
 
   @media (max-width: 600px) {
     .a-top {
-      height: 180px;
+      height: 200px;
     }
   }
 `;

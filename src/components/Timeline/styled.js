@@ -1,7 +1,14 @@
 import styled from 'styled-components';
 
+export const TimelineContainer = styled.section`
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+`;
+
 export const TimelineStyled = styled.div`
-  width: 80%;
+  width: 900px;
+  min-width: 900px;
   margin: 0 auto;
   height: 50px;
 

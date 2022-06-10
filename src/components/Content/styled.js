@@ -83,7 +83,6 @@ export const SecondContainer = styled.div`
     text-align: center;
     font-size: 3em;
     text-shadow: 0 3px 3px #000;
-    margin-bottom: 2%;
   }
   .hoje {
     text-decoration: underline;
@@ -105,19 +104,9 @@ export const SecondContainer = styled.div`
 
   .head-scnd-page {
     width: 100%;
+    height: fit-content;
     display: grid;
     grid-template-columns: 50% 50%;
-    gap: 60px;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-
-  .box-assista {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
   }
 
   .box-gif {
@@ -125,23 +114,20 @@ export const SecondContainer = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    margin: 10px;
+    justify-content: flex-start;
     width: 100%;
   }
 
   .box-gif img {
-    margin-top: 3%;
     width: 60%;
   }
 
   @media (max-width: 1200px) {
     .head-scnd-page {
-      grid-template-columns: 1fr;
-    }
-
-    .head-scnd-page {
-      gap: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
     }
   }
 
@@ -149,7 +135,7 @@ export const SecondContainer = styled.div`
     .assista-hoje,
     .hoje,
     .ntv {
-      font-size: 2em;
+      font-size: 1.5em;
       margin-bottom: 0.5%;
     }
   }

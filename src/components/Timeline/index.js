@@ -6,7 +6,7 @@ import { ProgressBar, Step } from 'react-step-progress-bar';
 import 'react-step-progress-bar/styles.css';
 import { getTime } from './script';
 
-import { TimelineStyled } from './styled';
+import { TimelineStyled, TimelineContainer } from './styled';
 
 export default function Timeline() {
   const paddingTop = {
@@ -14,7 +14,7 @@ export default function Timeline() {
     'backgroundColor': '#034f84'
   }
   return (
-    <div style={paddingTop}>
+    <TimelineContainer style={paddingTop}>
       <TimelineStyled>
         <ProgressBar percent={getTime()}>
           <Step>
@@ -175,6 +175,6 @@ export default function Timeline() {
           </Step>
         </ProgressBar>
       </TimelineStyled>
-    </div>
+    </TimelineContainer>
   );
 }
