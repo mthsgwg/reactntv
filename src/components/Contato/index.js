@@ -1,49 +1,84 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import emailjs from '@emailjs/browser';
 
 import { ContainerContato, ContatoContent } from './styled';
 
 export default function ContatoComponent() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_muzvrie',
+        'template_v5m8ert',
+        form.current,
+        'DO3CDASPUX-L4A28K',
+      )
+      .then(
+        (result) => {
+          toast.success(result.text + ' Mensagem enviada com sucesso');
+        },
+        (error) => {
+          toast.error(
+            error.text + ' Falha ao enviar mensagem, contate o suporte.',
+          );
+        },
+      );
+  };
   return (
     <>
+      <ToastContainer />
       <div className="spacing"></div>
       <ContainerContato>
         <ContatoContent>
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <ul>
               <li>
-                <label style={{ 'font-weight': 'bold' }}>nome</label>
+                <label style={{ fontWeight: 'bold' }}>nome</label>
                 <br />
                 <input
                   type={'text'}
                   placeholder="Seu nome"
                   className="form-nome"
+                  name="from_name"
                   required
                 />
               </li>
               <li>
-                <label style={{ 'font-weight': 'bold' }}>e-mail</label>
+                <label style={{ fontWeight: 'bold' }}>e-mail</label>
                 <br />
                 <input
                   type={'e-mail'}
                   placeholder="Seu e-mail"
-                  className="form-nome"
+                  className="form_phone"
+                  name="from_email"
                   required
                 />
               </li>
               <li>
-                <label style={{ 'font-weight': 'bold' }}>telefone</label>
+                <label style={{ fontWeight: 'bold' }}>telefone</label>
                 <br />
                 <input
                   type={'tel'}
                   placeholder="Seu telefone : Ex: (34) 9 9947-4515"
                   className="form-nome"
+                  name="from_phone"
                   required
                 />
               </li>
               <li>
-                <label style={{ 'font-weight': 'bold' }}>Sua mensagem</label>
+                <label style={{ fontWeight: 'bold' }}>mensagem</label>
                 <br />
-                <textarea name="message" className="form-nome" />
+                <textarea
+                  name="message"
+                  className="form-nome"
+                  placeholder="Sua mensagem"
+                />
               </li>
             </ul>
             <input type={'submit'} value="enviar" className="form-button" />

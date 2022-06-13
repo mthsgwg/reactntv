@@ -15,6 +15,7 @@ import NtvNews from './components/pages/Programas/NtvNews';
 import MaisSaude from './components/pages/Programas/MaisSaude';
 import EspacoFeminino from './components/pages/Programas/EspacoFeminino';
 import ButecoNossa from './components/pages/Programas/ButecoNossa';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ScrollToTop>
+      <Footer />
     </Router>
   );
 }

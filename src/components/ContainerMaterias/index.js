@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import secondApi from '../../services/secondApi';
 
 import { Container, SectionMaterias, SectionSearch } from './styled';
-import { FaSearch } from 'react-icons/fa';
 
 // eslint-disable-next-line react/prop-types
 export default function ContainerMaterias({ materiaProp }) {
@@ -27,14 +26,7 @@ export default function ContainerMaterias({ materiaProp }) {
     <Container>
       <div className="spacing" />
       <SectionSearch>
-        <div className="search-materias">materias</div>
-        <div className="search-materias"> redes sociais</div>
-        <div className="search-button">
-          <input type="text" placeholder="Buscar"></input>
-          <button type="submit">
-            <FaSearch />
-          </button>
-        </div>
+        <div className="search-materias">últimas materias</div>
       </SectionSearch>
       {selectedMateria ? (
         <section className="top-materia" id="top-html">
@@ -73,7 +65,18 @@ export default function ContainerMaterias({ materiaProp }) {
           );
         })}
       </SectionMaterias>
-      s
+      <SectionSearch>
+        <div className="search-materias">
+          Quer ver mais? acesse o nosso{' '}
+          <a
+            href="https://www.youtube.com/channel/UCe-9s6rqJUwLTJ3Q6-SldLA"
+            target={'_blank'}
+            rel="noreferrer"
+          >
+            youtube
+          </a>
+        </div>
+      </SectionSearch>
     </Container>
   );
 }

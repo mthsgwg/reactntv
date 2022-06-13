@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   height: 100%;
-  padding-top: 70px;
   background: rgb(3, 79, 132);
   background: linear-gradient(
     90deg,
@@ -77,7 +76,6 @@ export const Container = styled.div`
 `;
 
 export const SectionSearch = styled.section`
-  margin-top: 50px;
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -85,24 +83,26 @@ export const SectionSearch = styled.section`
   align-items: center;
   background-color: #f2f2f2;
   min-height: 80px;
+  margin-bottom: 1%;
 
   .search-materias {
     font-size: 3vw;
   }
 
-  .search-button {
-    display: flex;
+  @media (max-width: 700px) {
+    .search-materias {
+      font-size: 2em;
+      text-align: center;
+    }
   }
-  .search-button input {
-    width: 250px;
-    height: 30px;
-  }
-  .search-button button {
-    width: 20%;
+  & a {
+    color: #444;
+    font-weight: bold;
+    transition: all 0.5;
   }
 
-  @media (max-width: 700px) {
-    flex-direction: column;
+  & a:hover {
+    color: #034f84;
   }
 `;
 
@@ -111,7 +111,7 @@ export const SectionMaterias = styled.section`
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding-bottom: 5%;
+
   gap: 30px;
 
   .portrait {

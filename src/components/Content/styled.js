@@ -63,8 +63,7 @@ export const Container = styled.div`
 
   .text-pgm:hover {
     .live-span {
-      color: #15b1f1;
-      text-shadow: 0 2px 2px white;
+      text-shadow: 0 1px 1px white;
     }
   }
 `;

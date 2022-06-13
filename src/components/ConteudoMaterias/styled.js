@@ -192,14 +192,23 @@ export const ListaVideos = styled.div`
 
   .mais-materias a {
     text-align: right;
-    color: #ffa500;
+    color: linear-gradient(
+      90deg,
+      rgba(255, 193, 0, 1) 0%,
+      rgba(255, 124, 0, 1) 100%
+    );
     text-decoration: none;
     font-size: 2em;
     font-weight: 700;
+    transition: all 0.2s;
   }
 
   .mais-materias a:hover {
-    color: blue;
+    color: linear-gradient(
+      90deg,
+      rgba(200, 193, 100, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
   }
 
   .video-list a {
