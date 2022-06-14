@@ -26,11 +26,10 @@ export function getTime() {
     case dateHour >= 14 && minutos >= 15:
       return 47;
 
-    case dateHour >= 13 && minutos >= 45:
+    case dateHour >= 13:
+      if (minutos >= 45) return 39;
+      if (minutos >= 30) return 30;
       return 39;
-
-    case dateHour >= 13 && minutos >= 30:
-      return 30;
 
     case dateHour >= 12 && minutos >= 0:
       return 20;
