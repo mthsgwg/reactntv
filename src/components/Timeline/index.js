@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { ProgressBar, Step } from 'react-step-progress-bar';
 import 'react-step-progress-bar/styles.css';
@@ -9,10 +9,30 @@ import { getTime } from './script';
 import { TimelineStyled, TimelineContainer } from './styled';
 
 export default function Timeline() {
+  const [desc, setDesc] = useState();
+
   const paddingTop = {
     'padding': '30px',
     'backgroundColor': '#034f84'
   }
+
+  useEffect(() => {
+    const dia = new Date();
+    const hoje = dia.getDay();
+
+    if (hoje === 2)
+      return setDesc('18:00 Mais Saúde');
+    if (hoje === 3)
+      return setDesc('18:00 Espaço Feminino');
+    if (hoje === 4)
+      return setDesc('18:30 Buteco da Nossa');
+    if (hoje === 5)
+      return setDesc('18:30 Opinião Regional');
+
+    return setDesc('18:00 ')
+
+  }, []);
+
   return (
     <TimelineContainer style={paddingTop}>
       <TimelineStyled>
@@ -72,7 +92,7 @@ export default function Timeline() {
                   className={`indexedStep ${accomplished ? 'accomplished' : null
                     }`}
                 >
-                  <p>13:45 {' '} Hora Celeste</p>
+                  <p>13:45 {' '} Padre Manzotti</p>
                 </div>
               </ div>
             )}
@@ -84,7 +104,7 @@ export default function Timeline() {
                   className={`indexedStep ${accomplished ? 'accomplished' : null
                     }`}
                 >
-                  <p>14:00 {' '} Reginaldo Manzotti</p>
+                  <p>14:15 {' '} Rede Minas</p>
                 </div>
               </ div>
             )}
@@ -96,19 +116,7 @@ export default function Timeline() {
                   className={`indexedStep ${accomplished ? 'accomplished' : null
                     }`}
                 >
-                  <p>14:30 {' '} Rede Minas</p>
-                </div>
-              </ div>
-            )}
-          </Step>
-          <Step>
-            {({ accomplished, index }) => (
-              <div className='steps'>
-                <div
-                  className={`indexedStep ${accomplished ? 'accomplished' : null
-                    }`}
-                >
-                  <p>18:00 {' '} 18 horas</p>
+                  {desc ? (<p>{desc}</p>) : (<> </>)}
                 </div>
               </ div>
             )}

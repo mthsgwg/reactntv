@@ -9,5 +9,7 @@
 
 .legend {
   text-align: center;
-  padding-top: 20px;
+  background-color: #444;
+  color: #f2f2f2;
+  font-weight: 700;
 }

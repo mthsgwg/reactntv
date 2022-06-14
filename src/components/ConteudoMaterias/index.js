@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { FaSearch } from 'react-icons/fa';
 import secondApi from '../../services/secondApi';
 import { Link } from 'react-router-dom';
 
@@ -44,15 +43,9 @@ export default function ConteudoMaterias() {
           </section>
           <div className="older-content">
             <section className="container-older-content">
-              <div className="search-box">
-                <input type="text" placeholder="Buscar"></input>
-                <button type="submit">
-                  <FaSearch />
-                </button>
-              </div>
               <p className="title-older-content">Veja +!</p>
               <ListaVideos>
-                {materias.slice(9, 17).map((materia) => {
+                {materias.slice(9, 18).map((materia) => {
                   return (
                     <div className="video-list" key={materia.url}>
                       <Link

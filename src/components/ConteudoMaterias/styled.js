@@ -71,8 +71,8 @@ export const ContainerVideos = styled.div`
     flex-wrap: wrap;
   }
   .a-top {
-    width: 300px;
-    height: 250px;
+    width: 280px;
+    height: 275px;
     box-shadow: 2px 2px 4px black;
     margin: 5px;
     background-color: #f2f2f2;
@@ -94,13 +94,11 @@ export const ContainerVideos = styled.div`
   }
 
   .older-content {
-    width: 40vw;
+    width: 35vw;
     min-width: 500px;
     max-width: 40vw;
     height: fit-content;
-
-    background-color: white;
-    margin: 20px;
+    margin: 20px 0;
     box-shadow: 2px 2px 4px black;
   }
 
@@ -174,13 +172,13 @@ export const ListaVideos = styled.div`
 
   .video-list {
     width: 90%;
-    height: fit-content;
+    height: min-content;
     background-color: #fff;
-    box-shadow: 1px 0px 4px black;
+    box-shadow: 1px 1px 2px black;
     font-size: 1.2em;
     font-weight: 700;
-    color: #303030;
     margin: 5px;
+    text-align: justify;
   }
 
   .mais-materias {
@@ -191,7 +189,7 @@ export const ListaVideos = styled.div`
   }
 
   .mais-materias a {
-    text-align: right;
+    text-align: justify;
     color: linear-gradient(
       90deg,
       rgba(255, 193, 0, 1) 0%,

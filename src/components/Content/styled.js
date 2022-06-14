@@ -102,7 +102,7 @@ export const SecondContainer = styled.div`
   }
 
   .head-scnd-page {
-    width: 100%;
+    width: 85%;
     height: fit-content;
     display: grid;
     grid-template-columns: 50% 50%;
