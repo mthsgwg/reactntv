@@ -20,6 +20,7 @@ export default function ContainerMaterias({ materiaProp }) {
 
   function handleClick(materia) {
     setSelectedMateria(materia);
+    window.scrollTo(0, 0);
   }
 
   return (
