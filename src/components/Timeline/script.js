@@ -5,7 +5,6 @@ export function getTime() {
   const dateHour = Number(date.getHours());
 
   const totalMinutes = dateHour * 60 + minutos;
-  console.log(totalMinutes);
 
   switch (true) {
     case totalMinutes < 690:

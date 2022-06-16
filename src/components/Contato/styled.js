@@ -41,13 +41,13 @@ export const ContatoContent = styled.div`
   li textarea {
     padding: 10px;
     width: 100%;
-    height: 30px;
     margin-bottom: 5%;
     margin-bottom: 3%;
   }
 
   textarea {
-    height: 60px;
+    height: 90px;
+    max-height: 100px;
   }
 
   iframe {
