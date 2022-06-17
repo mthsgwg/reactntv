@@ -26,7 +26,7 @@ export default function Trinta() {
   useEffect(() => {
     (async () => {
       const response = await api.get(
-        `/youtube/v3/playlistItems?key=AIzaSyDaHQDAUz1WeUVFgxhYdbEUA-0eb2Am4Ig&part=snippet&playlistId=PLSmdHC4HiQ9KzeRXG9VAVJzIW9jgJcc_G&maxResults=500`,
+        `/youtube/v3/playlistItems?key=AIzaSyDaHQDAUz1WeUVFgxhYdbEUA-0eb2Am4Ig&part=snippet&playlistId=PLSmdHC4HiQ9Ke6f2uv_xvQdqUxr-QiUbq&maxResults=500`,
       );
 
       setVideo(response.data);
@@ -41,7 +41,7 @@ export default function Trinta() {
   async function MakeNewRequest(posts) {
     setLoading(true);
     const response = await api.get(
-      `/youtube/v3/playlistItems?key=${process.env.REACT_APP_API_KEY}&part=snippet&playlistId=PLSmdHC4HiQ9KzeRXG9VAVJzIW9jgJcc_G&maxResults=500&pageToken=${token}`,
+      `/youtube/v3/playlistItems?key=${process.env.REACT_APP_API_KEY}&part=snippet&playlistId=PLSmdHC4HiQ9Ke6f2uv_xvQdqUxr-QiUbq&maxResults=500&pageToken=${token}`,
     );
     const addPosts = [...posts, ...response.data.items];
     setPosts(addPosts);

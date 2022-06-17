@@ -12,19 +12,6 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 5fr;
 
-  .materias {
-    color: #f2f2f2;
-    font-size: 4vw;
-    width: 100%;
-    height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-      sans-serif;
-    font-weight: 700;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    text-align: center;
-  }
-
   .no-decorations {
     color: #000;
     text-decoration: none;
@@ -38,10 +25,6 @@ export const Container = styled.div`
   @media (max-width: 1200px) {
     & {
       grid-template-columns: 1fr;
-    }
-
-    .materias {
-      writing-mode: horizontal-tb;
     }
   }
 `;
@@ -99,7 +82,7 @@ export const ContainerVideos = styled.div`
     max-width: 40vw;
     height: fit-content;
     margin: 20px 0;
-    box-shadow: 2px 2px 4px black;
+    box-shadow: 0 0 20px black;
   }
 
   .container-older-content {
@@ -174,11 +157,10 @@ export const ListaVideos = styled.div`
     width: 90%;
     height: min-content;
     background-color: #fff;
-    box-shadow: 1px 1px 2px black;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
     font-size: 1.2em;
     font-weight: 700;
     margin: 5px;
-    text-align: justify;
   }
 
   .mais-materias {

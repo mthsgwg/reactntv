@@ -15,6 +15,7 @@ import NtvNews from './components/pages/Programas/NtvNews';
 import MaisSaude from './components/pages/Programas/MaisSaude';
 import EspacoFeminino from './components/pages/Programas/EspacoFeminino';
 import ButecoNossa from './components/pages/Programas/ButecoNossa';
+import OpiniaoRegional from './components/pages/Programas/OpiniaoRegional';
 import Footer from './components/Footer';
 
 function App() {
@@ -47,6 +48,11 @@ function App() {
             exact
             path="/programas/butecodanossa"
             element={<ButecoNossa />}
+          />
+          <Route
+            exact
+            path="/programas/opiniaoregional"
+            element={<OpiniaoRegional />}
           />
           <Route exact path="/contato" element={<Contato />} />
           <Route path="*" element={<NotFound />} />
