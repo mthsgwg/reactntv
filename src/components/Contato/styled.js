@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const ContainerContato = styled.section`
   width: 100%;
-  height: 93vh;
+  height: 100%;
+  min-height: 93vh;
   background: linear-gradient(
     90deg,
     rgba(27, 155, 207, 1) 0%,
@@ -15,7 +16,7 @@ export const ContainerContato = styled.section`
 
 export const ContatoContent = styled.div`
   width: 600px;
-  height: 80%;
+  max-height: 90%;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   padding: 15px;
@@ -51,7 +52,7 @@ export const ContatoContent = styled.div`
   }
 
   iframe {
-    margin-top: 10%;
+    width: auto;
   }
 
   .form-button {

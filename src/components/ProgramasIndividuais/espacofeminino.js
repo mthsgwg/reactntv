@@ -20,6 +20,7 @@ export default function Feminino() {
     // videos.items = videos.items.filter((videoItem) => videoItem.id != item.id);
     setVideo(videos);
     setCurrentVideo(item);
+    window.scrollTo(0, 0);
   }
 
   // Make the request on the components mount

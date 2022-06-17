@@ -12,7 +12,7 @@ import youtube from '../../images/youtube.png';
 
 export default function Footer() {
   return (
-    <FooterContainer>
+    <FooterContainer id="faleconosco">
       <h1> NTV </h1>
       <ImagesContainer>
         <FooterImageContainer>
