@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -7,11 +7,16 @@ import emailjs from '@emailjs/browser';
 import { ContainerContato, ContatoContent } from './styled';
 
 export default function ContatoComponent() {
+  const [disabled, setDisabled] = useState(false);
   const form = useRef();
 
-  const sendEmail = (e) => {
+  function handleClick(e) {
     e.preventDefault();
+    sendEmail();
+    setDisabled(true);
+  }
 
+  const sendEmail = () => {
     emailjs
       .sendForm(
         'service_muzvrie',
@@ -36,7 +41,7 @@ export default function ContatoComponent() {
       <div className="spacing"></div>
       <ContainerContato>
         <ContatoContent>
-          <form ref={form} onSubmit={sendEmail}>
+          <form ref={form} onSubmit={handleClick}>
             <ul>
               <li>
                 <label style={{ fontWeight: 'bold' }}>nome</label>
@@ -81,7 +86,12 @@ export default function ContatoComponent() {
                 />
               </li>
             </ul>
-            <input type={'submit'} value="enviar" className="form-button" />
+            <input
+              type={'submit'}
+              value={disabled ? 'enviado!' : 'enviar'}
+              className="form-button"
+              disabled={disabled}
+            />
             <iframe src="https://embed.lottiefiles.com/animation/85713"></iframe>
           </form>
         </ContatoContent>
