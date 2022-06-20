@@ -14,7 +14,6 @@ export const ProgramsContainer = styled.section`
     color: #f2f2f2;
     text-shadow: 2px 2px 4px black;
     font-weight: 700;
-    margin: 20px;
   }
 
   .first-row {

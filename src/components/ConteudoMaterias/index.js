@@ -43,7 +43,7 @@ export default function ConteudoMaterias() {
           </section>
           <div className="older-content">
             <section className="container-older-content">
-              <p className="title-older-content">Veja +!</p>
+              <p className="title-older-content">Veja também!</p>
               <ListaVideos>
                 {materias.slice(9, 15).map((materia) => {
                   return (
