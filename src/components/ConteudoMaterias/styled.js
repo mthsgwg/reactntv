@@ -169,7 +169,6 @@ export const ListaVideos = styled.div`
   .mais-materias {
     width: 90%;
     height: fit-content;
-    margin-top: 20px;
     margin-bottom: 20px;
   }
 
