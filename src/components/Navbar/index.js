@@ -14,7 +14,7 @@ export default function MainNavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="">
             <Nav.Link href="/materias" className="fw-bold fs-3 mx-5">
-              materias
+              matérias
             </Nav.Link>
             <Nav.Link href="/programas" className="fw-bold fs-3 mx-5">
               programas

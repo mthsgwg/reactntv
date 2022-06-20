@@ -47,3 +47,7 @@ code {
 .container-404 div p {
   font-size: 4em;
 }
+
+.navbar-nav .nav-link {
+  padding-bottom: 15px !important;
+}

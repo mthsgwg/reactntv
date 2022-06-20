@@ -69,6 +69,7 @@ export const ContainerVideos = styled.div`
     height: inherit;
     font-weight: 700;
     font-size: 1em;
+    padding: 5px 10px 0px 10px;
   }
 
   .video-thumb {
@@ -120,6 +121,7 @@ export const ContainerVideos = styled.div`
     margin: 20px;
     text-decoration: underline;
     color: #303030;
+    text-align: left;
   }
 
   @media (max-width: 1200px) {
@@ -166,6 +168,10 @@ export const ListaVideos = styled.div`
     margin: 5px;
   }
 
+  .video-list p {
+    padding: 12px 15px 0px 15px;
+  }
+
   .mais-materias {
     width: 90%;
     height: fit-content;
@@ -173,7 +179,6 @@ export const ListaVideos = styled.div`
   }
 
   .mais-materias a {
-    text-align: justify;
     color: linear-gradient(
       90deg,
       rgba(255, 193, 0, 1) 0%,
@@ -183,6 +188,9 @@ export const ListaVideos = styled.div`
     font-size: 2em;
     font-weight: 700;
     transition: all 0.2s;
+    float: right !important;
+    text-align: right;
+    margin-top: 10px;
   }
 
   .mais-materias a:hover {

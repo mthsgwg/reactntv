@@ -19,15 +19,25 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: 2fr 1fr;
     margin: 30px;
+    padding-top: 5px;
   }
 
   .player {
     aspect-ratio: 16 / 9;
   }
+  .text-pgm {
+    font-size: 3vw;
+    padding-top: 30%;
+    text-align: center;
+    text-transform: lowercase;
+    font-weight: 700;
+    text-shadow: 0 2px 2px black;
+    color: white;
+  }
 
   @media (max-width: 600px) {
     .text-pgm {
-      font-size: 30px !important;
+      padding-top: 30px;
     }
   }
 
@@ -39,19 +49,15 @@ export const Container = styled.div`
     & {
       height: fit-content;
     }
+  }
 
+  @media only screen and (min-width: 601px) and (max-width: 1200px) {
     .text-pgm {
-      font-size: 5vw;
+      padding-top: 30px;
     }
   }
 
   .text-pgm {
-    font-size: 3vw;
-    text-align: center;
-    text-transform: lowercase;
-    font-weight: 700;
-    text-shadow: 0 2px 2px black;
-    color: white;
   }
 
   .live-span {
@@ -79,6 +85,7 @@ export const SecondContainer = styled.div`
     text-align: center;
     font-size: 3em;
     text-shadow: 0 3px 3px #000;
+    padding: 10px 0px 30px 0px;
   }
   .hoje {
     text-decoration: underline;
@@ -103,6 +110,7 @@ export const SecondContainer = styled.div`
     height: fit-content;
     display: grid;
     grid-template-columns: 50% 50%;
+    padding-bottom: 20px;
   }
 
   .box-gif {
