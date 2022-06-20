@@ -118,7 +118,13 @@ export const SecondContainer = styled.div`
   }
 
   .box-gif img {
-    width: 60%;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .box-gif img:hover {
+    transform: scale(1.05);
   }
 
   @media (max-width: 1200px) {
