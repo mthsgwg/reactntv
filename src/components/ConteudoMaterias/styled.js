@@ -170,6 +170,11 @@ export const ListaVideos = styled.div`
 
   .video-list p {
     padding: 12px 15px 0px 15px;
+    color: black;
+  }
+
+  .video-list p:hover {
+    color: #000;
   }
 
   .mais-materias {
