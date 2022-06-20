@@ -13,16 +13,16 @@ export default function MainNavbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="">
-            <Nav.Link href="/materias" className="fw-bold fs-3 mx-5 p-0">
+            <Nav.Link href="/materias" className="fw-bold fs-3 mx-5">
               materias
             </Nav.Link>
-            <Nav.Link href="/programas" className="fw-bold fs-3 mx-5 p-0">
+            <Nav.Link href="/programas" className="fw-bold fs-3 mx-5">
               programas
             </Nav.Link>
-            <Nav.Link href="/contato" className="fw-bold fs-3 mx-5 p-0">
+            <Nav.Link href="/contato" className="fw-bold fs-3 mx-5">
               contato
             </Nav.Link>
-            <Nav.Link href="#faleconosco" className="fw-bold fs-3 mx-5 p-0">
+            <Nav.Link href="#faleconosco" className="fw-bold fs-3 mx-5">
               fale conosco
             </Nav.Link>
           </Nav>
