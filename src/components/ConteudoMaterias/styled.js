@@ -35,13 +35,13 @@ export const ContainerVideos = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
+  align-items: center;
   .videos {
     display: flex;
     flex-direction: column;
-    max-width: 50%;
-    min-width: 50%;
-    margin-top: 10px;
+    max-width: 55%;
+    min-width: 55%;
+    margin: 10px;
     height: fit-content;
   }
 
@@ -54,8 +54,8 @@ export const ContainerVideos = styled.div`
     flex-wrap: wrap;
   }
   .a-top {
-    width: 280px;
-    height: 275px;
+    width: 260px;
+    height: 260px;
     box-shadow: 2px 2px 4px black;
     margin: 5px;
     background-color: #f2f2f2;
@@ -77,12 +77,13 @@ export const ContainerVideos = styled.div`
   }
 
   .older-content {
-    width: 35vw;
-    min-width: 500px;
+    width: 30vw;
+    min-width: 400px;
     max-width: 40vw;
     height: fit-content;
-    margin: 20px 0;
+    margin: 10px;
     box-shadow: 0 0 20px black;
+    background-color: red;
   }
 
   .container-older-content {

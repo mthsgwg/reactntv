@@ -22,7 +22,7 @@ export default function ConteudoMaterias() {
         <ContainerVideos>
           <section className="videos">
             <div className="top">
-              {materias.slice(0, 9).map((materia) => {
+              {materias.slice(0, 6).map((materia) => {
                 return (
                   <div key={materia.url} className="a-top">
                     <Link
@@ -45,7 +45,7 @@ export default function ConteudoMaterias() {
             <section className="container-older-content">
               <p className="title-older-content">Veja +!</p>
               <ListaVideos>
-                {materias.slice(9, 18).map((materia) => {
+                {materias.slice(9, 15).map((materia) => {
                   return (
                     <div className="video-list" key={materia.url}>
                       <Link
