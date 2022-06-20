@@ -102,10 +102,12 @@ export const ContainerVideos = styled.div`
     justify-content: center;
     margin-top: 2%;
   }
+
   .search-box input {
     width: 80%;
     height: 30px;
   }
+
   .search-box button {
     width: 10%;
     height: 30px;
