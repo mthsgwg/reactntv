@@ -12,17 +12,17 @@ export default function MainNavbar() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/materias" className="fw-bold fs-3 mx-5">
+          <Nav className="">
+            <Nav.Link href="/materias" className="fw-bold fs-3 mx-5 p-0">
               materias
             </Nav.Link>
-            <Nav.Link href="/programas" className="fw-bold fs-3 mx-5">
+            <Nav.Link href="/programas" className="fw-bold fs-3 mx-5 p-0">
               programas
             </Nav.Link>
-            <Nav.Link href="/contato" className="fw-bold fs-3 mx-5">
+            <Nav.Link href="/contato" className="fw-bold fs-3 mx-5 p-0">
               contato
             </Nav.Link>
-            <Nav.Link href="#faleconosco" className="fw-bold fs-3 mx-5">
+            <Nav.Link href="#faleconosco" className="fw-bold fs-3 mx-5 p-0">
               fale conosco
             </Nav.Link>
           </Nav>
