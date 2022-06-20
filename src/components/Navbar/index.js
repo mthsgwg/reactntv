@@ -1,12 +1,11 @@
 import React from 'react';
-import './styles.css';
 
 import logo from '../../images/logo.png';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
 export default function MainNavbar() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="fixed-top">
+    <Navbar bg="dark" variant="dark" expand="xl" className="fixed-top">
       <Container>
         <Navbar.Brand href="/">
           <img width="50" height="50" src={logo} className="" />
@@ -23,11 +22,7 @@ export default function MainNavbar() {
             <Nav.Link href="/contato" className="fw-bold fs-3 mx-5">
               contato
             </Nav.Link>
-            <Nav.Link
-              href="#faleconosco"
-              className="fw-bold fs-2 mx-5"
-              id="custom-font"
-            >
+            <Nav.Link href="#faleconosco" className="fw-bold fs-3 mx-5">
               fale conosco
             </Nav.Link>
           </Nav>
