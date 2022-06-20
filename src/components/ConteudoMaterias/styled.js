@@ -70,6 +70,7 @@ export const ContainerVideos = styled.div`
     font-weight: 700;
     font-size: 1em;
     padding: 5px 10px 0px 10px;
+    color: #303030;
   }
 
   .video-thumb {
@@ -124,6 +125,11 @@ export const ContainerVideos = styled.div`
     text-align: left;
   }
 
+  .a-top:hover .legenda,
+  .video-list p:hover {
+    color: black;
+  }
+
   @media (max-width: 1200px) {
     .videos {
       max-width: 100%;
@@ -170,11 +176,7 @@ export const ListaVideos = styled.div`
 
   .video-list p {
     padding: 12px 15px 0px 15px;
-    color: black;
-  }
-
-  .video-list p:hover {
-    color: #000;
+    color: #303030;
   }
 
   .mais-materias {

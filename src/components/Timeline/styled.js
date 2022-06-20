@@ -35,8 +35,8 @@ export const TimelineStyled = styled.div`
   }
 
   .steps p {
-    padding-top: 50px;
     color: #f2f2f2;
     text-align: center;
+    padding-top: 60px;
   }
 `;
