@@ -33,7 +33,7 @@ export const Container = styled.div`
 
   @media (max-width: 1200px) {
     .first-section {
-      grid-template-columns: 1dfr;
+      grid-template-columns: 1fr;
     }
 
     & {
