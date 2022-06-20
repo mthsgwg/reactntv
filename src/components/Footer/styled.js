@@ -8,7 +8,7 @@ export const FooterContainer = styled.section`
   display: flex;
   flex-direction: column;
 
-  & h1 {
+  & h3 {
     text-align: center;
     font-weight: 700;
     font-size: 4em;
@@ -17,11 +17,15 @@ export const FooterContainer = styled.section`
   & p {
     text-align: center;
   }
+
+  & p:first-of-type {
+    margin-top: 15px;
+  }
 `;
 
 export const FooterImageContainer = styled.div`
   width: 40px;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 /1;
   align-items: center;
   margin: 10px;
 
