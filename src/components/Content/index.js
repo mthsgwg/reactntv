@@ -11,6 +11,7 @@ import gifTv from '../../images/banner-patosja.png';
 export default function Content() {
   return (
     <>
+      <div className="spacing" />
       <Container>
         <section className="first-section">
           <iframe

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding-top: 70px;
   width: 100%;
   height: 80%;
   background: rgb(255, 193, 0);
@@ -34,7 +33,7 @@ export const Container = styled.div`
 
   @media (max-width: 1200px) {
     .first-section {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1dfr;
     }
 
     & {
@@ -42,7 +41,6 @@ export const Container = styled.div`
     }
 
     .text-pgm {
-      margin-top: -15%;
       font-size: 5vw;
     }
   }
@@ -54,7 +52,6 @@ export const Container = styled.div`
     font-weight: 700;
     text-shadow: 0 2px 2px black;
     color: white;
-    padding-top: 22%;
   }
 
   .live-span {
