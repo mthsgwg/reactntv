@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.css';
 
 import logo from '../../images/logo.png';
 import { Navbar, Nav, Container } from 'react-bootstrap';
@@ -22,7 +23,11 @@ export default function MainNavbar() {
             <Nav.Link href="/contato" className="fw-bold fs-3 mx-5">
               contato
             </Nav.Link>
-            <Nav.Link href="#faleconosco" className="fw-bold fs-3 mx-5">
+            <Nav.Link
+              href="#faleconosco"
+              className="fw-bold fs-2 mx-5"
+              id="custom-font"
+            >
               fale conosco
             </Nav.Link>
           </Nav>
