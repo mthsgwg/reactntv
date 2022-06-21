@@ -29,7 +29,7 @@ export default function Timeline() {
     if (hoje === 5)
       return setDesc('18:30 Opinião Regional');
 
-    return setDesc('18:00 ')
+    return setDesc('18:00')
 
   }, []);
 

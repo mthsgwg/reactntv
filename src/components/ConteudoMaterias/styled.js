@@ -15,6 +15,8 @@ export const Container = styled.div`
   .no-decorations {
     color: #000;
     text-decoration: none;
+    width: 100%;
+    height: 100%;
   }
 
   .materias-videos {
@@ -76,6 +78,7 @@ export const ContainerVideos = styled.div`
   .video-thumb {
     overflow: hidden;
     overflow: scroll;
+    width: 100%;
   }
 
   .older-content {
@@ -154,6 +157,12 @@ export const ContainerVideos = styled.div`
   @media (max-width: 600px) {
     .a-top {
       height: 200px;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .a-top {
+      width: 350px;
     }
   }
 `;

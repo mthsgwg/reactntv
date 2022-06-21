@@ -10,6 +10,7 @@ export const TimelineStyled = styled.div`
   width: 900px;
   min-width: 900px;
   margin: 0 auto;
+  height: 50px;
 
   .indexedStep {
     color: white;
