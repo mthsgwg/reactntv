@@ -56,7 +56,7 @@ export default function Footer() {
         Rua Major Gote, 1127 - 3º andar - Centro - CEP 38700-001 - Patos de
         Minas-MG - Telefone: (34) 3821-4488
       </p>
-      <p>Todos os direitos reservados - NTV 2022®</p>
+      <p>©2022 NTV - Todos os direitos reservados </p>
     </FooterContainer>
   );
 }
