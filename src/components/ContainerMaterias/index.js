@@ -53,7 +53,7 @@ export default function ContainerMaterias({ materiaProp }) {
         {materias.map((materia) => {
           return (
             <div
-              className="portrait "
+              className="box-materia portrait"
               key={materia.titulo}
               onClick={() => handleClick(materia)}
             >
