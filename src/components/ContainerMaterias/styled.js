@@ -26,8 +26,7 @@ export const Container = styled.div`
     background-color: #f2f2f2;
     border-radius: 5px;
     padding: 10px;
-    margin-top: 2%;
-    height: fit-content;
+    height: 550px;
   }
 
   .player {
@@ -39,26 +38,33 @@ export const Container = styled.div`
     grid-template-columns: 2fr 1fr;
     gap: 40px;
     width: 90%;
-    height: max-content;
+    max-height: 500px;
   }
 
   .description-container {
     background-color: rgba(255, 255, 255, 0.3);
-    height: fit-content;
+    max-height: fit-content;
+    max-height: 500px;
+    overflow-y: auto;
   }
 
   .description {
-    margin-top: 20px;
     white-space: pre-line;
     font-size: 1.2em;
   }
 
   @media (max-width: 1200px) {
+    .top-materia {
+      height: fit-content;
+    }
+
     .grid-programa {
       grid-template-columns: 1fr;
+      max-height: fit-content;
     }
+
     .description-container {
-      height: 100%;
+      height: fit-content;
       width: 100%;
       overflow-y: auto;
     }
@@ -70,7 +76,7 @@ export const Container = styled.div`
     }
 
     .description {
-      font-size: 1em;
+      font-size: 0.7em;
     }
   }
 `;
@@ -87,9 +93,12 @@ export const SectionSearch = styled.section`
 
   .search-materias {
     font-size: 3vw;
+    font-weight: 700;
+    color: #f4f4f4;
+    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.9);
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 600px) {
     .search-materias {
       font-size: 2em;
       text-align: center;
@@ -122,6 +131,7 @@ export const SectionMaterias = styled.section`
     display: flex;
     flex-wrap: wrap;
     overflow-y: hidden;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   }
 
   .portrait:hover {
@@ -132,13 +142,13 @@ export const SectionMaterias = styled.section`
     width: 100%;
   }
 
-  .legenda {
+  .box-legenda {
     z-index: 10;
     text-align: center;
     height: 100%;
     max-height: 100%;
     font-weight: 700;
-    margin: 10px auto;
+    padding: 11px 5px 0 5px;
   }
 
   @media (max-width: 1200px) {

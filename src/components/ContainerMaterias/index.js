@@ -27,10 +27,10 @@ export default function ContainerMaterias({ materiaProp }) {
     <Container>
       <div className="spacing" />
       <SectionSearch>
-        <div className="search-materias">últimas materias</div>
+        <div className="search-materias">últimas matérias</div>
       </SectionSearch>
       {selectedMateria ? (
-        <section className="top-materia" id="top-html">
+        <section className="top-materia">
           <div className="grid-programa">
             <iframe
               width="100%"
@@ -42,7 +42,7 @@ export default function ContainerMaterias({ materiaProp }) {
               className="player"
             />
             <div className="description-container">
-              <h1 className="text-center text-dark fw-bold">
+              <h1 className="text-center text-dark fw-bold fs-3">
                 {selectedMateria.titulo}
               </h1>
             </div>
@@ -61,7 +61,7 @@ export default function ContainerMaterias({ materiaProp }) {
                 src={decodeURIComponent(materia.imagem)}
                 className="img-materias"
               />
-              <p className="legenda"> {materia.titulo}</p>
+              <p className="box-legenda"> {materia.titulo}</p>
             </div>
           );
         })}
@@ -74,7 +74,7 @@ export default function ContainerMaterias({ materiaProp }) {
             target={'_blank'}
             rel="noreferrer"
           >
-            youtube
+            YouTube
           </a>
         </div>
       </SectionSearch>

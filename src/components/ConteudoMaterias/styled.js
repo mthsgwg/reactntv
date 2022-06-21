@@ -57,7 +57,7 @@ export const ContainerVideos = styled.div`
   }
   .a-top {
     width: 260px;
-    height: 260px;
+    height: 320px;
     box-shadow: 2px 2px 4px black;
     margin: 5px;
     background-color: #f2f2f2;
@@ -68,7 +68,7 @@ export const ContainerVideos = styled.div`
     z-index: 10;
     text-align: center;
     width: 100%;
-    height: inherit;
+    height: 100%;
     font-weight: 700;
     font-size: 1em;
     padding: 5px 10px 0px 10px;
