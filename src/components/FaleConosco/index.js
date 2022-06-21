@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser';
 
 import { ContainerContato, ContatoContent } from './styled';
 
-export default function ContatoComponent() {
+export default function FaleComponent() {
   const [disabled, setDisabled] = useState(false);
   const form = useRef();
 

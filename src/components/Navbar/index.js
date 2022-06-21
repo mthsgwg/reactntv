@@ -19,11 +19,11 @@ export default function MainNavbar() {
             <Nav.Link href="/programas" className="fw-bold fs-3 mx-5">
               programas
             </Nav.Link>
+            <Nav.Link href="/faleconosco" className="fw-bold fs-3 mx-5">
+              fale conosco
+            </Nav.Link>
             <Nav.Link href="/contato" className="fw-bold fs-3 mx-5">
               contato
-            </Nav.Link>
-            <Nav.Link href="#faleconosco" className="fw-bold fs-3 mx-5">
-              fale conosco
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
