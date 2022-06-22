@@ -38,6 +38,7 @@ export const ContainerVideos = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+
   .videos {
     display: flex;
     flex-direction: column;
@@ -133,36 +134,37 @@ export const ContainerVideos = styled.div`
     color: black;
   }
 
-  @media (max-width: 1200px) {
-    .videos {
-      max-width: 100%;
-      min-width: 100%;
-      width: 100%;
-    }
-
-    .older-content {
-      width: 90%;
-      min-width: 90%;
-      max-width: 90%;
-    }
-
-    .legenda {
-      font-size: 0.7em;
-    }
-    .a-top {
-      height: 220px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .a-top {
-      height: 200px;
-    }
-  }
-
   @media (min-width: 1600px) {
     .a-top {
-      width: 350px;
+      width: 310px;
+    }
+  }
+
+  @media (min-width: 1200px) and (max-width: 1599px) {
+    .a-top {
+      width: 250px;
+    }
+  }
+
+  @media (min-width: 1000px) and (max-width: 1199px) {
+    .a-top {
+      width: 200px;
+    }
+
+    .videos {
+      max-width: 80%;
+      min-width: 80%;
+    }
+  }
+
+  @media (max-width: 999px) {
+    .videos {
+      max-width: 80%;
+      min-width: 80%;
+    }
+
+    .a-top {
+      width: 250px;
     }
   }
 `;
