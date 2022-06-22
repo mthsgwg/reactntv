@@ -57,8 +57,8 @@ export const ContainerVideos = styled.div`
     flex-wrap: wrap;
   }
   .a-top {
-    width: 260px;
-    height: 320px;
+    width: 250px;
+    height: 280px;
     box-shadow: 2px 2px 4px black;
     margin: 5px;
     background-color: #f2f2f2;
