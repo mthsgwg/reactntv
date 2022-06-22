@@ -16,6 +16,7 @@ import MaisSaude from './components/pages/Programas/MaisSaude';
 import EspacoFeminino from './components/pages/Programas/EspacoFeminino';
 import ButecoNossa from './components/pages/Programas/ButecoNossa';
 import OpiniaoRegional from './components/pages/Programas/OpiniaoRegional';
+import Contato from './components/PaginaContato';
 import Footer from './components/Footer';
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
             element={<OpiniaoRegional />}
           />
           <Route exact path="/faleconosco" element={<FaleConosco />} />
+          <Route exact path="/contato" element={<Contato />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ScrollToTop>

@@ -8,6 +8,7 @@ export const ProgramsContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 30px;
 
   .program-title {
     font-size: 4em;

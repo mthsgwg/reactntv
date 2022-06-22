@@ -87,12 +87,11 @@ export const SectionSearch = styled.section`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #f2f2f2;
   min-height: 80px;
-  margin-bottom: 1%;
+  margin-bottom: 30px;
 
   .search-materias {
-    font-size: 3vw;
+    font-size: 4em;
     font-weight: 700;
     color: #f4f4f4;
     text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.9);

@@ -12,7 +12,7 @@ export default function ConteudoMaterias() {
       const response = await secondApi.get();
       const map = response.data;
       const result = Object.values(map);
-      setMaterias(result);
+      setMaterias(result.reverse());
     })();
   }, []);
 

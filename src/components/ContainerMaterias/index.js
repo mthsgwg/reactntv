@@ -14,7 +14,7 @@ export default function ContainerMaterias({ materiaProp }) {
       const response = await secondApi.get();
       const map = response.data;
       const result = Object.values(map);
-      setMaterias(result);
+      setMaterias(result.reverse());
     })();
   }, []);
 
@@ -27,7 +27,7 @@ export default function ContainerMaterias({ materiaProp }) {
     <Container>
       <div className="spacing" />
       <SectionSearch>
-        <div className="search-materias">últimas matérias</div>
+        <div className="search-materias search-titulo">últimas matérias</div>
       </SectionSearch>
       {selectedMateria ? (
         <section className="top-materia">
@@ -67,7 +67,7 @@ export default function ContainerMaterias({ materiaProp }) {
         })}
       </SectionMaterias>
       <SectionSearch>
-        <div className="search-materias">
+        <div className="search-materias search-titulo">
           Quer ver mais? acesse o nosso{' '}
           <a
             href="https://www.youtube.com/channel/UCe-9s6rqJUwLTJ3Q6-SldLA"
