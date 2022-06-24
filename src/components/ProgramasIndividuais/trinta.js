@@ -11,7 +11,7 @@ export default function Trinta() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(15);
+  const [postsPerPage] = useState(24);
   const [token, setToken] = useState('');
 
   function toggleCurrentVideo(item, index) {
@@ -65,38 +65,43 @@ export default function Trinta() {
       <div className="spacing" />
       <ContainerMateria>
         <WrapperMateria>
-          <div className="grid-programa">
-            <iframe
-              width="100%"
-              height="100%"
-              src={`https://www.youtube.com/embed/${currentVideo?.snippet?.resourceId?.videoId}`}
-              title="YouTube video player"
-              frameBorder="0"
-              allowFullScreen
-              className="player"
-            />
-            <div className="description-container">
-              <h1 className="text-center text-dark fw-bold">
-                {currentVideo?.snippet?.title}
-              </h1>
-              <p className="description">
-                {currentVideo?.snippet?.description}
-              </p>
+          <section className="top-materia">
+            <div className="grid-programa">
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${currentVideo?.snippet?.resourceId?.videoId}`}
+                title="YouTube video player"
+                frameBorder="0"
+                allowFullScreen
+                className="player"
+              />
+              <div className="description-container">
+                <h1 className="titulo-programa">
+                  {currentVideo?.snippet?.title.toLowerCase()}
+                </h1>
+                <p className="description">
+                  {currentVideo?.snippet?.description}
+                </p>
+              </div>
             </div>
-          </div>
+          </section>
         </WrapperMateria>
 
-        <div className="container-second-api mt-5">
-          <div className=" mb-4 d-flex flex-wrap justify-content-around background-color-right">
+        <div className="container-second-api">
+          <div className="materias-antigas">
             {currentPosts.map((post) => (
               <div
                 key={post?.id}
-                className=" bg-light m-2 list-group-item-box "
+                className="placeholder-programas"
                 onClick={() => toggleCurrentVideo(post)}
               >
-                <img src={post?.snippet?.thumbnails?.medium?.url} />
-                <p className="text-center fw-bold pt-2">
-                  {post?.snippet?.title}
+                <img
+                  src={post?.snippet?.thumbnails?.medium?.url}
+                  width={'100%'}
+                />
+                <p className="old-programas-titulo">
+                  {post?.snippet?.title.toLowerCase()}
                 </p>
               </div>
             ))}
@@ -109,7 +114,10 @@ export default function Trinta() {
           />
           <div className="">
             {loading ? null : (
-              <button onClick={() => MakeNewRequest(posts)} className="mb-3">
+              <button
+                onClick={() => MakeNewRequest(posts)}
+                className="pagination-button"
+              >
                 Carregar vídeos anteriores
               </button>
             )}

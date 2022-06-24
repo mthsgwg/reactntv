@@ -8,12 +8,21 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
     pageNumbers.push(i);
   }
 
+  const responsivity = {
+    width: '100%',
+    'max-width': '100%',
+    'overflow-x': 'auto',
+  };
+
   return (
-    <nav>
-      <ul className="pagination ">
+    <nav className="mt-3">
+      <ul className="pagination" style={responsivity}>
         {pageNumbers.map((number) => (
-          <li key={number}>
-            <button onClick={() => paginate(number)} className="page-link">
+          <li key={number} className={`li-pagination`}>
+            <button
+              onClick={() => paginate(number)}
+              className={`page-link fw-bold`}
+            >
               {number}
             </button>
           </li>

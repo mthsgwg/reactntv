@@ -67,7 +67,7 @@ export default function ContainerMaterias({ materiaProp }) {
         })}
       </SectionMaterias>
       <SectionSearch>
-        <div className="search-materias search-titulo">
+        <div className="search-materias search-youtube">
           Quer ver mais? acesse o nosso{' '}
           <a
             href="https://www.youtube.com/channel/UCe-9s6rqJUwLTJ3Q6-SldLA"

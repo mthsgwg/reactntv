@@ -26,11 +26,14 @@ export const Container = styled.div`
     background-color: #f2f2f2;
     border-radius: 5px;
     padding: 10px;
-    height: 550px;
+    min-height: 550px;
+    height: fit-content;
   }
 
   .player {
     aspect-ratio: 16 / 9;
+    width: 100%;
+    height: 100%;
   }
 
   .grid-programa {
@@ -38,12 +41,11 @@ export const Container = styled.div`
     grid-template-columns: 2fr 1fr;
     gap: 40px;
     width: 90%;
-    max-height: 500px;
+    height: fit-content;
   }
 
   .description-container {
     background-color: rgba(255, 255, 255, 0.3);
-    max-height: fit-content;
     max-height: 500px;
     overflow-y: auto;
   }
@@ -56,6 +58,7 @@ export const Container = styled.div`
   @media (max-width: 1200px) {
     .top-materia {
       height: fit-content;
+      min-height: 200px;
     }
 
     .grid-programa {

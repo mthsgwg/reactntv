@@ -12,6 +12,32 @@ export const ContatoContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+  .search-materias {
+    font-size: 4em;
+    font-weight: 700;
+    color: #f4f4f4;
+    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.9);
+    margin-bottom: 60px;
+    margin-top: 40px;
+  }
+
+  @media (max-width: 600px) {
+    .search-materias {
+      font-size: 2em;
+      text-align: center;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  a:hover {
+    color: #0d6efd;
+  }
 `;
 
 export const ContatoBox = styled.div`
@@ -19,10 +45,18 @@ export const ContatoBox = styled.div`
   min-height: 50vh;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 20px;
-  padding: 10px 15px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
 
   & h2 {
     text-align: center;
+    margin-top: 15px;
+    font-weight: 900;
+    color: #0d6efd;
   }
 `;
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useRef, useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -35,11 +36,13 @@ export default function FaleComponent() {
         },
       );
   };
+
   return (
     <>
       <ToastContainer />
       <div className="spacing"></div>
       <ContainerContato>
+        <h3 className="search-materias search-titulo">fale conosco</h3>
         <ContatoContent>
           <form ref={form} onSubmit={handleClick}>
             <ul>
@@ -69,7 +72,7 @@ export default function FaleComponent() {
                 <label style={{ fontWeight: 'bold' }}>telefone</label>
                 <br />
                 <input
-                  type={'tel'}
+                  type={'num'}
                   placeholder="Seu telefone : Ex: (34) 9 9947-4515"
                   className="form-nome"
                   name="from_phone"
@@ -89,7 +92,7 @@ export default function FaleComponent() {
             <input
               type={'submit'}
               value={disabled ? 'enviado!' : 'enviar'}
-              className="form-button"
+              className="form-button pagination-button"
               disabled={disabled}
             />
             <iframe src="https://embed.lottiefiles.com/animation/85713"></iframe>
