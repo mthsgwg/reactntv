@@ -9,10 +9,10 @@ export default function ConteudoMaterias() {
 
   useEffect(() => {
     (async () => {
-      const response = await secondApi.get();
+      const response = await secondApi.get('/materias');
+      console.log(response.data);
       const map = response.data;
-      const result = Object.values(map);
-      setMaterias(result.reverse());
+      setMaterias(map);
     })();
   }, []);
 
@@ -31,7 +31,7 @@ export default function ConteudoMaterias() {
                       className="no-decorations"
                     >
                       <img
-                        src={decodeURIComponent(materia.imagem)}
+                        src={decodeURIComponent(materia.url_imagem)}
                         className="video-thumb"
                       />
                       <p className="legenda">{materia.titulo}</p>
@@ -47,7 +47,7 @@ export default function ConteudoMaterias() {
               <ListaVideos>
                 {materias.slice(9, 15).map((materia) => {
                   return (
-                    <div className="video-list" key={materia.url}>
+                    <div className="video-list" key={materia.id}>
                       <Link
                         to={'/materias'}
                         state={{ materias: materia }}

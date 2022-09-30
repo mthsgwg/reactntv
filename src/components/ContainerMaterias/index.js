@@ -8,13 +8,12 @@ import { Container, SectionMaterias, SectionSearch } from './styled';
 export default function ContainerMaterias({ materiaProp }) {
   const [materias, setMaterias] = useState([]);
   const [selectedMateria, setSelectedMateria] = useState(materiaProp);
-
+  console.log(materias);
   useEffect(() => {
     (async () => {
-      const response = await secondApi.get();
+      const response = await secondApi.get('/materias');
       const map = response.data;
-      const result = Object.values(map);
-      setMaterias(result.reverse());
+      setMaterias(map);
     })();
   }, []);
 
@@ -35,7 +34,7 @@ export default function ContainerMaterias({ materiaProp }) {
             <iframe
               width="100%"
               height="100%"
-              src={decodeURIComponent(selectedMateria.youtube)}
+              src={decodeURIComponent(selectedMateria.url_video)}
               title="YouTube video player"
               frameBorder="0"
               allowFullScreen
@@ -45,6 +44,7 @@ export default function ContainerMaterias({ materiaProp }) {
               <h1 className="text-center text-dark fw-bold fs-3">
                 {selectedMateria.titulo}
               </h1>
+              <p>{selectedMateria.descricao}</p>
             </div>
           </div>
         </section>
@@ -58,7 +58,7 @@ export default function ContainerMaterias({ materiaProp }) {
               onClick={() => handleClick(materia)}
             >
               <img
-                src={decodeURIComponent(materia.imagem)}
+                src={decodeURIComponent(materia.url_imagem)}
                 className="img-materias"
               />
               <p className="box-legenda"> {materia.titulo}</p>
